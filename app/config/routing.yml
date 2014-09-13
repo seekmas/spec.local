@@ -1,0 +1,2 @@
+app_backend:
+    resource: "@AppBackendBundle/Resources/config/route.yml"
