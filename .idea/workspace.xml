@@ -68,7 +68,7 @@
       <file leaf-file-name="parameters.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="25" selection-start="339" selection-end="339" vertical-scroll-proportion="0.21128452" vertical-offset="0" max-vertical-offset="833">
+            <state line="9" column="26" selection-start="291" selection-end="291" vertical-scroll-proportion="0.17286915" vertical-offset="0" max-vertical-offset="833">
               <folding />
             </state>
           </provider>
@@ -683,7 +683,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="25" selection-start="339" selection-end="339" vertical-scroll-proportion="0.21128452" vertical-offset="0" max-vertical-offset="833">
+        <state line="9" column="26" selection-start="291" selection-end="291" vertical-scroll-proportion="0.17286915" vertical-offset="0" max-vertical-offset="833">
           <folding />
         </state>
       </provider>
