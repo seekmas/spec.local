@@ -29,7 +29,7 @@
       <file leaf-file-name="FirstController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="818" selection-end="1196" vertical-scroll-proportion="0.5745375" vertical-offset="0" max-vertical-offset="919">
+            <state line="14" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="0.2437432" vertical-offset="0" max-vertical-offset="919">
               <folding>
                 <element signature="e#48#105#0" expanded="true" />
               </folding>
@@ -40,10 +40,19 @@
       <file leaf-file-name="Mailer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Mailer/Mailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="9" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-19.84" vertical-offset="96" max-vertical-offset="1056">
+            <state line="11" column="6" selection-start="1107" selection-end="1114" vertical-scroll-proportion="-7.04" vertical-offset="0" max-vertical-offset="1072">
               <folding>
                 <element signature="e#43#104#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Resources/views/MailTemplating/default.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="42" selection-start="118" selection-end="118" vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="8128">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,6 +86,7 @@
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Mailer/MailerInterface.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Mailer/Mailer.php" />
+        <option value="$PROJECT_DIR$/src/App/BackendBundle/Resources/views/MailTemplating/default.html.twig" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php" />
       </list>
     </option>
@@ -190,7 +200,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mailer" />
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MailTemplating" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -216,39 +234,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -578,9 +564,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Resources/views/MailTemplating/default.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="42" selection-start="118" selection-end="118" vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="8128">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Mailer/Mailer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="9" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-19.84" vertical-offset="96" max-vertical-offset="1056">
+        <state line="11" column="6" selection-start="1107" selection-end="1114" vertical-scroll-proportion="-7.04" vertical-offset="0" max-vertical-offset="1072">
           <folding>
             <element signature="e#43#104#0" expanded="true" />
           </folding>
@@ -589,7 +582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="818" selection-end="1196" vertical-scroll-proportion="0.5745375" vertical-offset="0" max-vertical-offset="919">
+        <state line="14" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="0.2437432" vertical-offset="0" max-vertical-offset="919">
           <folding>
             <element signature="e#48#105#0" expanded="true" />
           </folding>
