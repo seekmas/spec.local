@@ -32,7 +32,7 @@ class Mailer implements MailerInterface
 
         $message = \Swift_Message::newInstance()
             ->setSubject($subject)
-            //->setFrom('service')
+            ->setFrom('service@symfonytutorial.com')
             ->setTo( $user->getEmail() )
             ->setBody($body)
         ;
