@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FirstController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FirstController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="46" selection-start="853" selection-end="864" vertical-scroll-proportion="-21.12" vertical-offset="0" max-vertical-offset="816">
+            <state line="33" column="47" selection-start="865" selection-end="865" vertical-scroll-proportion="0.64356434" vertical-offset="8" max-vertical-offset="816">
               <folding>
                 <element signature="e#48#105#0" expanded="true" />
               </folding>
@@ -43,19 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parameters.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="parameters.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="30" selection-start="265" selection-end="265" vertical-scroll-proportion="0.17286915" vertical-offset="0" max-vertical-offset="833">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="route.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Resources/config/route.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
+            <state line="9" column="26" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
               <folding />
             </state>
           </provider>
@@ -84,8 +75,8 @@
         <option value="$PROJECT_DIR$/app/config/app.yml" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/DependencyInjection/AppBackendExtension.php" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Resources/config/route.yml" />
-        <option value="$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php" />
       </list>
     </option>
   </component>
@@ -470,15 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="46" selection-start="853" selection-end="864" vertical-scroll-proportion="-21.12" vertical-offset="0" max-vertical-offset="816">
-          <folding>
-            <element signature="e#48#105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="32" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="1200">
@@ -488,8 +470,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="30" selection-start="265" selection-end="265" vertical-scroll-proportion="0.17286915" vertical-offset="0" max-vertical-offset="833">
+        <state line="9" column="26" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="47" selection-start="865" selection-end="865" vertical-scroll-proportion="0.64356434" vertical-offset="8" max-vertical-offset="816">
+          <folding>
+            <element signature="e#48#105#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
