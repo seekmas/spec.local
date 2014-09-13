@@ -38,7 +38,8 @@ class FirstController extends Controller
             ->setBody('swift mailer test')
         ;
 
-        $this->get('mailer')->send($message);
+        echo $this->get('mailer')->send($message);
+        
         return new Response('');
     }
 
