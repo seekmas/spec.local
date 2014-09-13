@@ -23,13 +23,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FirstController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FirstController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="32" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.8118812" vertical-offset="0" max-vertical-offset="816">
+            <state line="33" column="46" selection-start="853" selection-end="864" vertical-scroll-proportion="-21.12" vertical-offset="0" max-vertical-offset="816">
               <folding>
                 <element signature="e#48#105#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="32" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="1200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameters.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="30" selection-start="265" selection-end="265" vertical-scroll-proportion="0.17286915" vertical-offset="0" max-vertical-offset="833">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,6 +85,7 @@
         <option value="$PROJECT_DIR$/src/App/BackendBundle/DependencyInjection/AppBackendExtension.php" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Resources/config/route.yml" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
       </list>
     </option>
   </component>
@@ -181,6 +200,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -309,11 +360,6 @@
         <state line="19" column="36" selection-start="573" selection-end="573" vertical-scroll-proportion="0.53038675" vertical-offset="0" max-vertical-offset="544" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="581" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="55" selection-start="68" selection-end="68" vertical-scroll-proportion="0.027538726" vertical-offset="0" max-vertical-offset="581" />
@@ -380,13 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="76" selection-end="76" vertical-scroll-proportion="0.038415365" vertical-offset="0" max-vertical-offset="1200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
@@ -433,10 +472,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Controller/FirstController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="32" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.8118812" vertical-offset="0" max-vertical-offset="816">
+        <state line="33" column="46" selection-start="853" selection-end="864" vertical-scroll-proportion="-21.12" vertical-offset="0" max-vertical-offset="816">
           <folding>
             <element signature="e#48#105#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="30" selection-start="265" selection-end="265" vertical-scroll-proportion="0.17286915" vertical-offset="0" max-vertical-offset="833">
+          <folding />
         </state>
       </provider>
     </entry>
