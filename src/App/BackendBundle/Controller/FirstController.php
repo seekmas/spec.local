@@ -39,6 +39,7 @@ class FirstController extends Controller
         ;
 
         $this->get('mailer')->send($message);
+        return new Response('');
     }
 
 }
