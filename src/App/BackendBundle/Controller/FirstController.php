@@ -32,7 +32,7 @@ class FirstController extends Controller
     public function emailAction()
     {
         $message = \Swift_Message::newInstance()
-            ->setSubject('Hello Email')
+            ->setSubject('Date Notification - Now time is :'.date('Y-m-d H:i:s'))
             ->setFrom('service@symfonytutorial.com')
             ->setTo('446146366@qq.com')
             ->setBody('Date Notification - Now time is :'.date('Y-m-d H:i:s'))
