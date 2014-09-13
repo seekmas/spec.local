@@ -19,7 +19,10 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "raulfraile/ladybug-bundle": "~1.0",
-        "ocramius/proxy-manager": "0.5.*"
+        "ocramius/proxy-manager": "0.5.*",
+        "friendsofsymfony/user-bundle": "2.0.*@dev",
+        "knplabs/knp-time-bundle": "1.1.*@dev",
+        "knplabs/knp-disqus-bundle": "1.1.*@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
