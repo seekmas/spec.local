@@ -34,12 +34,12 @@ class FirstController extends Controller
         $message = \Swift_Message::newInstance()
             ->setSubject('Hello Email')
             ->setFrom('service@symfonytutorial.com')
-            ->setTo('446146366@qq.com')
-            ->setBody('swift mailer test')
+            ->setTo('seekmas@msn.cn')
+            ->setBody('Date Notification - Now time is :'.date('Y-m-d H:i:s'))
         ;
 
         echo $this->get('mailer')->send($message);
-        
+
         return new Response('');
     }
 
