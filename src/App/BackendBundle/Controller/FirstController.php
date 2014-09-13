@@ -12,7 +12,10 @@ class FirstController extends Controller
 {
     public function indexAction(Request $request)
     {
-
+        $subject = 'Refactoring a Symfony 2 Controller with PhpSpec ';
+        $body = 'Hello world';
+        $template = $this->get('templating')->render('AppBackendBundle:MailTemplating:default.html.twig' , ['subject'=>$subject,'body'=>$body]);
+        return new Response($template);
     }
 
     public function processAction()
