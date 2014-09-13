@@ -34,7 +34,7 @@ class FirstController extends Controller
         $message = \Swift_Message::newInstance()
             ->setSubject('Hello Email')
             ->setFrom('service@symfonytutorial.com')
-            ->setTo('seekmas@msn.cn')
+            ->setTo('446146366@qq.com')
             ->setBody('Date Notification - Now time is :'.date('Y-m-d H:i:s'))
         ;
 
