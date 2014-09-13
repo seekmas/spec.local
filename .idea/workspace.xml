@@ -40,7 +40,7 @@
       <file leaf-file-name="Mailer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Mailer/Mailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="48" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.64417845" vertical-offset="0" max-vertical-offset="1072">
+            <state line="39" column="20" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.6789989" vertical-offset="0" max-vertical-offset="1120">
               <folding>
                 <element signature="e#43#104#0" expanded="true" />
               </folding>
@@ -582,7 +582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Mailer/Mailer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="48" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.64417845" vertical-offset="0" max-vertical-offset="1072">
+        <state line="39" column="20" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.6789989" vertical-offset="0" max-vertical-offset="1120">
           <folding>
             <element signature="e#43#104#0" expanded="true" />
           </folding>
