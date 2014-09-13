@@ -1,7 +1,2 @@
 app_backend:
-    name: app_backend
-    title: app backend
-    remote:
-        mot:
-            prototype: parameter
-            description: This is a bundle config parameter
+    notify_email: service@symfonytutorial.com

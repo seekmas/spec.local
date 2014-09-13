@@ -1,2 +1,5 @@
 app_backend:
     resource: "@AppBackendBundle/Resources/config/route.yml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

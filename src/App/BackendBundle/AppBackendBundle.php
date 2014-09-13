@@ -8,6 +8,6 @@ class AppBackendBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
-
+        //$container->compile();
     }
 }

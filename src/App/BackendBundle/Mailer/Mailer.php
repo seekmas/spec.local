@@ -7,7 +7,7 @@ use JMS\DiExtraBundle\Annotation\Service;
 use JMS\DiExtraBundle\Annotation as DI;
 
 /**
- * @Service("mail.notify", public=false)
+ * @Service("mail.notify", public=true)
  */
 class Mailer implements MailerInterface
 {
@@ -17,11 +17,10 @@ class Mailer implements MailerInterface
 
     /**
      * @DI\InjectParams({
-     *      "service_container" = @DI\Inject("service_container") ,
-     *      "from" = "service@symfonytutorial.com"
+     *      "service_container" = @DI\Inject("service_container")
      * })
      */
-    public function __construct(ContainerInterface $service_container , $from)
+    public function __construct(ContainerInterface $service_container)
     {
         $this->service_container = $service_container;
     }
@@ -29,11 +28,11 @@ class Mailer implements MailerInterface
 
     public function notify($subject, $body)
     {
-        $user = $this->get('security')->getToken()->getUser();
+        $user = $this->get('security.context')->getToken()->getUser();
 
         $message = \Swift_Message::newInstance()
             ->setSubject($subject)
-            ->setFrom($this->from)
+            //->setFrom('service')
             ->setTo( $user->getEmail() )
             ->setBody($body)
         ;
