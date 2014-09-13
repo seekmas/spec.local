@@ -31,14 +31,14 @@ class FirstController extends Controller
 
     public function emailAction()
     {
-//        $message = \Swift_Message::newInstance()
-//            ->setSubject('Date Notification - Now time is :'.date('Y-m-d H:i:s'))
-//            ->setFrom('service@symfonytutorial.com')
-//            ->setTo('446146366@qq.com')
-//            ->setBody('Date Notification - Now time is :'.date('Y-m-d H:i:s'))
-//        ;
-//
-//        echo $this->get('mailer')->send($message);
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Date Notification - Now time is :'.date('Y-m-d H:i:s'))
+            ->setFrom('service@symfonytutorial.com')
+            ->setTo('446146366@qq.com')
+            ->setBody('Date Notification - Now time is :'.date('Y-m-d H:i:s'))
+        ;
+
+        echo $this->get('mailer')->send($message);
 
         return new Response(
             $this->get('mail.notify')->notify('notify service test' , 'This is a message from App\BackendBundle\Mailer\Mailer') ? '发送成功' : '发送失败'
