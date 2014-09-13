@@ -35,7 +35,7 @@ class Mailer implements MailerInterface
             ->setFrom('service@symfonytutorial.com')
             ->setTo( $user->getEmail() )
             ->setBody(
-                $this->get('templating')->renderResponse('AppBackendBundle:MailTemplating:default.html.twig' , ['subject' => $subject , 'body' => $body])
+                $this->get('templating')->render('AppBackendBundle:MailTemplating:default.html.twig' , ['subject' => $subject , 'body' => $body])
             )
         ;
 
