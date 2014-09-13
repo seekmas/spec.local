@@ -71,3 +71,9 @@ swiftmailer:
     spool:     { type: memory }
 
 knp_time: ~
+
+jms_di_extra:
+    locations:
+        all_bundles: false
+        bundles: [AppBackendBundle]
+        directories: ["%kernel.root_dir%/../src"]

@@ -19,6 +19,9 @@ class AppKernel extends Kernel
 
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\TimeBundle\KnpTimeBundle(),
+            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
+            new JMS\AopBundle\JMSAopBundle(),
+
             //add app bundle
             new App\BackendBundle\AppBackendBundle(),
         );
