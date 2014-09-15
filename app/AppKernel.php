@@ -19,11 +19,15 @@ class AppKernel extends Kernel
 
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\TimeBundle\KnpTimeBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\AopBundle\JMSAopBundle(),
 
+            new Liip\ImagineBundle\LiipImagineBundle(),
+
             //add app bundle
             new App\BackendBundle\AppBackendBundle(),
+            new App\FrontendBundle\AppFrontendBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

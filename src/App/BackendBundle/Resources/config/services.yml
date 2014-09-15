@@ -2,3 +2,20 @@ parameters:
 
 
 services:
+    #File Upload
+    file.upload:
+        class: App\BackendBundle\Upload\FileUpload
+        arguments: [@service_container]
+
+    #Entity
+    lesson.entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ App\BackendBundle\Entity\Lesson ]
+
+    chapter.entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ App\BackendBundle\Entity\Chapter ]

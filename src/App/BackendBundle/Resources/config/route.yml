@@ -1,7 +1,3 @@
-home:
-    path: /
-    defaults: { _controller: AppBackendBundle:First:index }
-
-email:
-    path: /email
-    defaults: { _controller: AppBackendBundle:First:email }
+frist_admin:
+    resource: "@AppBackendBundle/Controller/FirstController.php"
+    type:     annotation

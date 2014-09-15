@@ -2,39 +2,58 @@
 
 namespace App\BackendBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use App\BackendBundle\Entity\Chapter;
+use App\BackendBundle\Entity\Lesson;
+use App\BackendBundle\Form\ChapterType;
+use App\BackendBundle\Form\LessonType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Process\Process;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-class FirstController extends Controller
+class FirstController extends CoreController
 {
+    /**
+     * @Route("/" , name="lesson")
+     * @Template()
+     */
     public function indexAction(Request $request)
     {
-        $subject = 'Refactoring a Symfony 2 Controller with PhpSpec ';
-        $body = 'Hello world';
-        $template = $this->get('templating')->render('AppBackendBundle:MailTemplating:default.html.twig' , ['subject'=>$subject,'body'=>$body]);
-        return new Response($template);
-    }
 
-    public function processAction()
-    {
-        $logger = $this->get('logger');
-        $logger->info('I just got the logger');
+        $lesson = new Lesson();
+        $type = new LessonType();
+        $form = $this->getForm($request,$type,$lesson);
 
-        $process = new Process('/home/wwwroot/local/spec.local/app/console container:debug');
-        $process->run();
-
-        if( !$process->isSuccessful())
+        if( $form->isValid())
         {
-            throw new \RuntimeException($process->getErrorOutput());
+            $this->processForm($form , $lesson);
+            $this->flash('success' , 'add success');
+            return $this->to('lesson');
         }
 
-        echo '<pre>';
-        echo $process->getOutput();
+        return ['form' => $form->createView()];
     }
 
+    /**
+     * @Route("/chapter" , name="chapter")
+     * @Template()
+     */
+    public function chapterAction(Request $request)
+    {
+
+        $chapter = new Chapter();
+        $type = new ChapterType();
+        $form = $this->getForm($request,$type,$chapter);
+        if($form->isValid())
+        {
+            $this->processForm($form,$chapter);
+            $this->flash('success' , '章节添加成功');
+            return $this->to('chapter');
+        }
+
+        return ['form'=>$form->createView()];
+    }
 
     public function emailAction()
     {

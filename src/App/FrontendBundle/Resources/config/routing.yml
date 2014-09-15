@@ -1,0 +1,7 @@
+frist_home:
+    resource: "@AppFrontendBundle/Controller/FirstController.php"
+    type:     annotation
+
+frist_arrangement:
+    resource: "@AppFrontendBundle/Controller/CalenderController.php"
+    type:     annotation

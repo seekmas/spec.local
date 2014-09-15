@@ -1,0 +1,147 @@
+{% extends "AppFrontendBundle:Theme:layout.html.twig" %}
+
+{% block moduleName %}课程目录{% endblock %}
+
+{% block body %}
+    <div class="contentpanel">
+
+    <div class="row">
+    <div class="col-sm-9">
+    <div class="row filemanager">
+
+
+
+    {% for lesson in lessons %}
+    <div class="col-xs-6 col-sm-4 col-md-3 document">
+        <div class="thmb">
+            <div style="display: none;" class="ckbox ckbox-default">
+
+            </div>
+            <div style="display: none;" class="btn-group fm-group">
+                <button type="button" class="btn btn-default dropdown-toggle fm-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu fm-menu" role="menu">
+                    <li><a href="#"><i class="fa fa-share"></i> Share</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> Email</a></li>
+                    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+                    <li><a href="#"><i class="fa fa-download"></i> Download</a></li>
+                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                </ul>
+            </div><!-- btn-group -->
+            <div class="thmb-prev">
+                <img src="{{ asset(lesson.photo) | imagine_filter('lessonPreview') }}" class="img-responsive" alt="">
+            </div>
+            <h4><a href="{{ url('home_lesson' , {'id' : lesson.id}) }}">{{ lesson.id }} . {{ lesson.name }}</a></h4>
+        </div><!-- thmb -->
+    </div><!-- col-xs-6 -->
+    {% endfor %}
+
+
+    </div><!-- row -->
+    </div><!-- col-sm-9 -->
+    <div class="col-sm-3">
+        <div class="fm-sidebar">
+
+            <button class="btn btn-primary btn-block">Upload Files</button>
+
+            <div class="mb30"></div>
+
+            <h5 class="subtitle">Folders <a href="#" class="pull-right">+ Add New Folder</a></h5>
+            <ul class="folder-list">
+                <li><a href="#"><i class="fa fa-folder-o"></i> My Pictures</a></li>
+                <li><a href="#"><i class="fa fa-folder-o"></i> Facebook Photos</a></li>
+                <li><a href="#"><i class="fa fa-folder-o"></i> My Collection</a></li>
+                <li><a href="#"><i class="fa fa-folder-o"></i> Illustrations</a></li>
+                <li><a href="#"><i class="fa fa-folder-o"></i> TV Series</a></li>
+                <li><a href="#"><i class="fa fa-folder-o"></i> Downloaded Movies</a></li>
+                <li><a href="#"><i class="fa fa-folder-o"></i> E-book</a></li>
+            </ul>
+
+            <div class="mb30"></div>
+
+            <h5 class="subtitle">Tags</h5>
+            <ul class="tag-list">
+                <li><a href="#">Animation</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Trailer</a></li>
+                <li><a href="#">Short Film</a></li>
+                <li><a href="#">Dubstep</a></li>
+                <li><a href="#">Soundtrack</a></li>
+                <li><a href="#">Photography</a></li>
+                <li><a href="#">Macro</a></li>
+                <li><a href="#">Tuturials</a></li>
+                <li><a href="#">Documentation</a></li>
+            </ul>
+
+        </div>
+    </div><!-- col-sm-3 -->
+    </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+    {{ parent() }}
+    <link href="{{ asset('bracket/css/prettyPhoto.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('bracket/js/jquery.prettyPhoto.js') }}"></script>
+<script>
+    $(document).ready(function(){
+        jQuery('.thmb').hover(function(){
+            var t = jQuery(this);
+            t.find('.ckbox').show();
+            t.find('.fm-group').show();
+        }, function() {
+            var t = jQuery(this);
+            if(!t.closest('.thmb').hasClass('checked')) {
+                t.find('.ckbox').hide();
+                t.find('.fm-group').hide();
+            }
+        });
+
+        function enable_itemopt(enable) {
+            if(enable) {
+                jQuery('.itemopt').removeClass('disabled');
+            } else {
+
+                // check all thumbs if no remaining checks
+                // before we can disabled the options
+                var ch = false;
+                jQuery('.thmb').each(function(){
+                    if(jQuery(this).hasClass('checked'))
+                        ch = true;
+                });
+
+                if(!ch)
+                    jQuery('.itemopt').addClass('disabled');
+            }
+        }
+        //Replaces data-rel attribute to rel.
+        //We use data-rel because of w3c validation issue
+        $('a[data-rel]').each(function() {
+            jQuery(this).attr('rel', jQuery(this).data('rel'));
+        });
+
+        $("a[rel^='prettyPhoto']").prettyPhoto();
+    });
+    $(function(){
+
+        if( $("div.thmb").length > 0 )
+        {
+            var maxHeight = 0;
+            $("div.thmb").each(function(){
+                if ($(this).height() > maxHeight) {
+                    maxHeight = $(this).height();
+                    console.log(maxHeight);
+                }
+            });
+            $("div.thmb").height(maxHeight);
+        }
+    });
+</script>
+{% endblock %}

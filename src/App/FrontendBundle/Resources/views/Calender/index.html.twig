@@ -1,0 +1,30 @@
+{% extends "AppFrontendBundle:Theme:layout.html.twig" %}
+
+{% block moduleName %}活动{% endblock %}
+
+{% block body %}
+
+<div class="contentpanel">
+    <div class="row">
+        <div class="col-md-9">
+
+
+
+        </div><!-- col-md-9 -->
+    </div>
+</div>
+
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('bracket/css/fullcalendar.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('bracket/js/jquery-ui-1.10.3.min.js') }}"></script>
+<script src="{{ asset('bracket/js/fullcalendar.min.js') }}"></script>
+
+
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends "AppFrontendBundle:Theme:layout.html.twig" %}
+
+{% block moduleName %}课程学习{% endblock %}
+
+{% block body %}
+<div class="contentpanel">
+
+<div class="row">
+<div class="col-sm-3">
+
+    <h3>课程介绍</h3>
+    <p class="mb30"></p>
+    <video id="example_video" class="video-js vjs-default-skin" controls preload="none" width="100%" height="242"
+           poster="{{ asset(lesson.photo) }}"
+           data-setup="{}">
+        <source src="http://youtube.local/QuickStart_ZF2.mp4" type='video/mp4' />
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+
+    <div class="mb30"></div>
+
+
+
+    <h3>课程包含</h3>
+    <ul class="profile-social-list">
+        {% for key,chapter in lesson.chapter %}
+
+            <li><span class="glyphicon glyphicon-facetime-video"></span> &nbsp;&nbsp;{{ key+1 }}. {{ chapter.name }}</li>
+
+        {% endfor %}
+    </ul>
+
+
+</div><!-- col-sm-3 -->
+<div class="col-sm-9">
+
+    <div class="profile-header">
+        <h2 class="profile-name">{{ lesson.name }}</h2>
+
+
+        <div class="mb20"></div>
+
+        <a class="btn btn-success mr5"><i class="fa fa-user"></i> 购买课程</a>
+        <a href="{{ url('home_lesson' , {'id':lesson.id}) }}" class="btn btn-white"><i class="fa fa-envelope-o"></i> 返回课程列表</a>
+    </div>
+
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs nav-justified nav-profile">
+    <li class="active">
+        <a href="#activities" data-toggle="tab">
+        {% if chapter == NULL %}
+            <strong>课程小节</strong>
+        {% else %}
+            <strong>{{ chapter.name }}</strong>
+        {% endif %}
+        </a>
+    </li>
+    <li><a href="#followers" data-toggle="tab"><strong>课程介绍</strong></a></li>
+    <li><a href="#following" data-toggle="tab"><strong>讨论</strong></a></li>
+    <li><a href="#events" data-toggle="tab"><strong>线下活动</strong></a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+<div class="tab-pane active" id="activities">
+    <div class="activity-list">
+
+    {% if chapter == NULL %}
+
+        {% for key , chapter in lesson.chapter %}
+        <div class="media act-media">
+            <a class="pull-left" href="#">
+                <img class="media-object act-thumb" src="{{ asset(chapter.photo) | imagine_filter('chapter') }}" alt="">
+            </a>
+            <div class="media-body act-media-body">
+                <h3><a href="{{ url('home_lesson',{'id':lesson.id,'chapterId':chapter.id}) }}">{{ key+1 }}. {{ chapter.name }}</a></h3><br>
+                <small class="text-muted">{{ chapter.shortDescription }}</small>
+            </div>
+        </div><!-- media -->
+        {% endfor %}
+
+    {% else %}
+
+        <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="100%" height="500"
+               poster="{{ asset(chapter.photo) }}"
+               data-setup="{}">
+            <source src="{{ chapter.video }}" type='video/mp4' />
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+
+
+        <div class="blog-item">
+            <a href="blog-single.html" class="blog-img"><img src="images/photos/blog1.jpg" class="img-responsive" alt=""></a>
+            <div class="blog-details">
+                <h4 class="blog-title"><a href="#">{{ chapter.name }}</a></h4>
+
+                <div class="blog-summary">
+                    <p>{{ chapter.content | raw }}</p>
+                    <button class="btn btn-sm btn-white">Read More</button>
+                </div>
+            </div>
+        </div>
+
+    {% endif %}
+
+    </div><!-- activity-list -->
+</div>
+
+<div class="tab-pane" id="followers">
+
+    <div class="follower-list">
+
+        <div class="mb20">{{ lesson.description | raw }}</div>
+
+    </div><!--follower-list -->
+
+</div>
+<div class="tab-pane" id="following">
+
+    <div class="activity-list">
+
+    </div><!-- activity-list -->
+
+</div>
+
+
+<div class="tab-pane" id="events">
+    <div class="events">
+
+
+
+    </div><!-- events -->
+</div>
+</div><!-- tab-content -->
+
+</div><!-- col-sm-9 -->
+</div><!-- row -->
+
+</div>
+{% endblock %}
