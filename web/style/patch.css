@@ -6,3 +6,15 @@
 textarea {
     height: 400px;
 }
+a.style {
+    padding: 8px;
+    color: #428bca;
+}
+
+a.style:hover {
+    padding: 8px;
+    border-radius: 4px;
+    background: #428bca;
+    color: #ffffff;
+    text-decoration: none;
+}

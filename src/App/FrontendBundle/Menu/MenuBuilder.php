@@ -18,7 +18,7 @@ class MenuBuilder extends ContainerAware
 
         $menu->addChild('training',['attributes' =>['icon'=>'fa fa-home'],'label' => '培训','route' => '']);
 
-        $menu->addChild('forum',['attributes' =>['icon'=>'fa fa-home'],'label' => '社区','route' => '']);
+        $menu->addChild('forum',['attributes' =>['icon'=>'fa fa-home'],'label' => '社区','route' => 'forum']);
 
         $menu->addChild('arrangement',['attributes' =>['icon'=>'fa fa-home'],'label' => '活动','route' => 'home_calender']);
 

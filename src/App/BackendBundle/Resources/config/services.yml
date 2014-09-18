@@ -3,6 +3,11 @@ parameters:
 
 services:
     #Twig
+    twig.extension.text:
+       class: Twig_Extensions_Extension_Text
+       tags:
+           - { name: twig.extension }
+
     bool.twig.extension:
         class: App\BackendBundle\TwigExtension\PageBoolExtension
         tags:
@@ -40,3 +45,20 @@ services:
         factory_service: doctrine
         factory_method: getRepository
         arguments: [ App\BackendBundle\Entity\User ]
+
+    purchase.entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ App\BackendBundle\Entity\Purchase ]
+
+    thread.entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ App\BackendBundle\Entity\Thread ]
+
+    #pagination
+    thread.paginator:
+        class: App\BackendBundle\Pagination\KnpPagination
+        arguments: [ @knp_paginator , @thread.entity , @request_stack ]

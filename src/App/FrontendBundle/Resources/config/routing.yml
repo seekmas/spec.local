@@ -6,6 +6,14 @@ user_home:
     resource: "@AppFrontendBundle/Controller/UserController.php"
     type:     annotation
 
+pay_home:
+    resource: "@AppFrontendBundle/Controller/PayController.php"
+    type:     annotation
+
+forum_home:
+    resource: "@AppFrontendBundle/Controller/ForumController.php"
+    type:     annotation
+
 frist_arrangement:
     resource: "@AppFrontendBundle/Controller/CalenderController.php"
     type:     annotation

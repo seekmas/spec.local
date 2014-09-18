@@ -1,0 +1,29 @@
+<div class="read-panel">
+
+    <div class="media">
+        <a href="#" class="pull-left">
+            <img alt="" src="{{ asset(thread.user.privates.photo) }}" class="media-object">
+        </a>
+        <div class="media-body">
+            <span class="media-meta pull-right">{{ time_diff(thread.createdAt) }}</span>
+            <h4 class="text-primary">{{ thread.user.username }}</h4>
+            <small class="text-muted">{{ thread.user.email }}</small>
+        </div>
+    </div><!-- media -->
+
+    <h4 class="email-subject">{{ thread.subject }}</h4>
+
+    {{ thread.content | raw }}
+
+    <br>
+
+    <div class="media">
+        <a href="#" class="pull-left">
+            <img alt="" src="{{ asset(app.user.privates.photo) }}" class="media-object">
+        </a>
+        <div class="media-body">
+            <textarea class="form-control" placeholder="Reply here..."></textarea>
+        </div>
+    </div><!-- media -->
+
+</div>

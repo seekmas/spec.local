@@ -12,6 +12,7 @@
     <link href="{{ asset('bracket/css/style.default.css') }}" rel="stylesheet">
     <link href="{{ asset('video-js/video-js.css') }}" rel="stylesheet">
     <link href="{{ asset('style/patch.css') }}" rel="stylesheet">
+    <link href="{{ asset('style/label.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('bracket/css/bootstrap-fileupload.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('bracket/css/bootstrap-timepicker.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('bracket/css/jquery.tagsinput.css') }}" />
@@ -35,18 +36,11 @@
 </div>
 
 <section>
-
-
     <div class="leftpanel">
         {% include "AppFrontendBundle:Theme:left.html.twig" %}
     </div>
 
-
-
     <div class="mainpanel">
-
-
-
     <div class="headerbar">
 
         <a class="menutoggle"><i class="fa fa-bars"></i></a>
@@ -87,7 +81,7 @@
         <div class="breadcrumb-wrapper">
             <span class="label">你当前的位置:</span>
             <ol class="breadcrumb">
-                <li><a href="index.html">精益云学院首页</a></li>
+                <li><a href="{{ url('home_page') }}">精益云学院首页</a></li>
                 {% block navigation %}{% endblock %}
             </ol>
         </div>
@@ -133,6 +127,23 @@
     <script src="{{ asset('bracket/js/jquery.cookies.js') }}"></script>
     <script src="{{ asset('bracket/js/custom.js') }}"></script>
     <script src="{{ asset('video-js/video.js') }}"></script>
+    <script src="{{ asset('bracket/js/wysihtml5-0.3.0.min.js') }}"></script>
+    <script src="{{ asset('bracket/js/bootstrap-wysihtml5.js') }}"></script>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery('textarea').wysihtml5(
+                    {
+                        "font-styles": false,
+                        "emphasis": false,
+                        "lists": false,
+                        "html": false,
+                        "link": true,
+                        "image": true,
+                        "color": false
+                    }
+            );
+        });
+    </script>
 {% endblock %}
 <script>
     videojs.options.flash.swf = "{{ asset('video-js/video-js.swf') }}";

@@ -5,6 +5,7 @@ namespace App\FrontendBundle\Controller;
 use App\BackendBundle\Controller\CoreController;
 use App\BackendBundle\Entity\Requirement;
 use App\BackendBundle\Form\RequirementType;
+use App\BackendBundle\PurchaseStatus;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,13 +13,20 @@ use Symfony\Component\HttpFoundation\Request;
 class FirstController extends CoreController
 {
     /**
-     * @Route("/" , name="home_page")
+     * @Route("/{categoryId}" , name="home_page" , requirements={"categoryId"="\d+"})
      * @Template()
      */
-    public function indexAction()
+    public function indexAction($categoryId = 0)
     {
 
-        $lessons = $this->get('lesson.entity')->findAll();
+        if($categoryId == 0)
+        {
+            $lessons = $this->get('lesson.entity')->findAll();
+        }
+        else{
+            $lessons = $this->get('lesson.entity')->findBy(['categoryId'=>$categoryId]);
+        }
+
 
         $categories = $this->get('category.entity')->findAll();
 
@@ -43,10 +51,19 @@ class FirstController extends CoreController
         {
             $chapter = null;
         }
+        $user = $this->getUser();
+
+        $purchase = $this->get('purchase.entity')->findOneBy([
+            'lessonId' => $lesson->getId() ,
+            'userId'   => $user->getId() ,
+            'isLocked' => false ,
+            'statusId' => PurchaseStatus::Paid ,
+        ]);
 
         return [
             'lesson' => $lesson ,
             'chapter'=> $chapter ,
+            'purchase' => $purchase ,
         ];
     }
 

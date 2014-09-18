@@ -24,6 +24,8 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
 
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+
             new Liip\ImagineBundle\LiipImagineBundle(),
 
             //add app bundle

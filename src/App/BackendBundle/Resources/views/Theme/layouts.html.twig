@@ -77,18 +77,17 @@
         </div>
 
         <div class="contentpanel">
-
-
-            <div class="people-list">
                 <div class="row">
-
+                    {% for type, messages in app.session.flashbag.all() %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ type }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
 
                     {% block body %}{% endblock %}
-
-
                 </div><!-- row -->
-            </div><!-- people-list -->
-
         </div><!-- contentpanel -->
 
     </div>

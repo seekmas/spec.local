@@ -1,0 +1,65 @@
+{% extends "AppFrontendBundle:Theme:layout.html.twig" %}
+
+{% block moduleName %}社区{% endblock %}
+
+{% block body %}
+    <div class="contentpanel panel-email">
+
+        <div class="row">
+            <div class="col-sm-3 col-lg-2">
+                <button class="btn btn-danger btn-block btn-compose-email">发帖子</button>
+                <ul class="nav nav-pills nav-stacked nav-email">
+                    <li>
+                        <a href="#">
+                            <span class="badge pull-right">2</span>
+                            <i class="glyphicon glyphicon-inbox"></i> 所有讨论
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="glyphicon glyphicon-star"></i> 收藏</a></li>
+                    <li>
+                        <a href="#">
+                            <span class="badge pull-right">3</span>
+                            <i class="glyphicon glyphicon-pencil"></i> 草稿箱
+                        </a>
+                    </li>
+                </ul>
+                <div class="mb30"></div>
+                <h5 class="subtitle">Folders</h5>
+                <ul class="nav nav-pills nav-stacked nav-email mb20">
+                    <li>
+                        <a href="#">
+                            <span class="badge pull-right">2</span>
+                            <i class="glyphicon glyphicon-folder-open"></i> Conference
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="glyphicon glyphicon-folder-open"></i> Newsletter</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-folder-open"></i> Invitations</a></li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-folder-open"></i> Promotions
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- col-sm-3 -->
+
+            <div class="col-sm-9 col-lg-10">
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+
+                        {% include "AppFrontendBundle:Forum:thread_content.html.twig" %}
+
+
+                    </div><!-- panel-body -->
+                </div><!-- panel -->
+
+
+            </div><!-- col-sm-9 -->
+
+        </div><!-- row -->
+
+    </div>
+
+
+{% endblock %}

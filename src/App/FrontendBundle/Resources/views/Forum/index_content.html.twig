@@ -1,0 +1,36 @@
+<div class="table-responsive">
+<table class="table table-email">
+<tbody>
+
+{% for thread in threads %}
+<tr>
+    <td>
+        #{{ thread.id }}
+    </td>
+    <td>
+        <a href="#" class="star"><i class="glyphicon glyphicon-star"></i></a>
+    </td>
+    <td>
+        <div class="media">
+            <a href="#" class="pull-left">
+                <img src="{{ thread.user.privates.photo }}" class="media-object">
+            </a>
+            <div class="media-body">
+
+                <span class="media-meta pull-right">{{ time_diff(thread.createdAt) }}</span>
+                <a href="{{ url('thread' , {'id':thread.id} ) }}">
+                    <h4 class="text-primary">{{ thread.subject }}</h4>
+                </a>
+                <small class="text-muted"></small>
+                <p class="email-summary">{{ thread.content | striptags | truncate(120) }}</p>
+            </div>
+        </div>
+    </td>
+</tr>
+{% endfor %}
+
+
+
+</tbody>
+</table>
+</div><!-- table-responsive -->

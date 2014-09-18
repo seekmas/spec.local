@@ -16,7 +16,7 @@ class CalenderController extends CoreController
     {
 
         echo $this->getUser()->getEmail();
-        $this->get('mail.notify')
+        echo $this->get('mail.notify')
              ->notify('云学院NotificationMessage' ,
                       'Composer will automatically download all required files, and install them for you. All that is left to do is to update your AppKernel.php file, and register the new bundle');
 
