@@ -1,0 +1,33 @@
+{% extends "AppFrontendBundle:Theme:layout.html.twig" %}
+
+{% block moduleName %}我有新需求{% endblock %}
+
+{% block navigation %}
+<li>我有新需求</li>
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+        <div class="panel panel-primary panel-alt">
+            <div class="panel-heading">
+                <div class="panel-btns">
+                    <a href="#" class="panel-close">×</a>
+                    <a href="#" class="minimize">−</a>
+                </div><!-- panel-btns -->
+                <h3 class="panel-title">提需求</h3>
+                <p>发送你的课程需求到课程开发团队</p>
+            </div>
+            <div class="panel-body">
+                {{ form(form) }}
+            </div>
+        </div><!-- panel -->
+    </div>
+
+    <div class="col-md-4"></div>
+</div>
+
+
+{% endblock %}

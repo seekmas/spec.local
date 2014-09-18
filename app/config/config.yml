@@ -68,7 +68,10 @@ swiftmailer:
     host:      "%mailer_host%"
     username:  "%mailer_user%"
     password:  "%mailer_password%"
-    spool:     { type: memory }
+#    spool:     { type: memory }
+    spool:
+        type: file
+        path: "%kernel.root_dir%/../spool"
 
 knp_time: ~
 
@@ -91,12 +94,19 @@ liip_imagine:
 
     filter_sets:
         cache: ~
+        tiny:
+            quality: 100
+            filters:
+                thumbnail: { size: [50,50], mode: outbound }
         lessonPreview:
             quality: 100
             filters:
                 thumbnail: { size: [267,178], mode: outbound }
-
         chapter:
             quality: 100
             filters:
                 thumbnail: { size: [120,90], mode: outbound }
+        lessonTiny:
+            quality: 100
+            filters:
+                thumbnail: { size: [100,100], mode: outbound }

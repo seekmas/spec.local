@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ed8921da52483ad346da7676cce06320",
+    "hash": "75d9302664139abfa8b5d9abc1c3f947",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -81,16 +81,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "e16d7adf45664a50fa86f515b6d5e7f670130449"
+                "reference": "cf483685798a72c93bf4206e3dd6358ea07d64e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/e16d7adf45664a50fa86f515b6d5e7f670130449",
-                "reference": "e16d7adf45664a50fa86f515b6d5e7f670130449",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/cf483685798a72c93bf4206e3dd6358ea07d64e7",
+                "reference": "cf483685798a72c93bf4206e3dd6358ea07d64e7",
                 "shasum": ""
             },
             "require": {
@@ -106,7 +106,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.4.x-dev"
                 }
             },
             "autoload": {
@@ -120,17 +120,6 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
@@ -139,10 +128,16 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
                     "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Caching library offering an object-oriented API for many cache backends",
@@ -151,7 +146,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2013-10-25 19:04:14"
+            "time": "2014-09-17 14:24:04"
         },
         {
             "name": "doctrine/collections",
@@ -687,12 +682,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "7001669bccb3fcedfc1c5411ecb2157715e92dd6"
+                "reference": "1813840f0e3edccc76746e0b9e3e28e684e1f13c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/7001669bccb3fcedfc1c5411ecb2157715e92dd6",
-                "reference": "7001669bccb3fcedfc1c5411ecb2157715e92dd6",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/1813840f0e3edccc76746e0b9e3e28e684e1f13c",
+                "reference": "1813840f0e3edccc76746e0b9e3e28e684e1f13c",
                 "shasum": ""
             },
             "require": {
@@ -746,7 +741,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2014-09-12 11:18:14"
+            "time": "2014-09-17 16:47:17"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1235,6 +1230,139 @@
             "time": "2014-07-12 07:13:19"
         },
         {
+            "name": "jms/translation-bundle",
+            "version": "dev-master",
+            "target-dir": "JMS/TranslationBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/JMSTranslationBundle.git",
+                "reference": "aa1cc4797997a30d4fdc55eb1f6042965b4b823f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/JMSTranslationBundle/zipball/aa1cc4797997a30d4fdc55eb1f6042965b4b823f",
+                "reference": "aa1cc4797997a30d4fdc55eb1f6042965b4b823f",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "0.9.4",
+                "symfony/console": "*",
+                "symfony/framework-bundle": "~2.1"
+            },
+            "conflict": {
+                "twig/twig": "1.10.2"
+            },
+            "require-dev": {
+                "jms/di-extra-bundle": ">=1.1",
+                "sensio/framework-extra-bundle": "*",
+                "symfony/browser-kit": "*",
+                "symfony/class-loader": "*",
+                "symfony/css-selector": "*",
+                "symfony/finder": "*",
+                "symfony/form": "*",
+                "symfony/process": "*",
+                "symfony/security": "*",
+                "symfony/twig-bundle": "*",
+                "symfony/validator": "*",
+                "symfony/yaml": "*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "JMS\\TranslationBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache2"
+            ],
+            "authors": [
+                {
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Puts the Symfony2 Translation Component on steroids",
+            "homepage": "http://jmsyst.com/bundles/JMSTranslationBundle",
+            "keywords": [
+                "extract",
+                "extraction",
+                "i18n",
+                "interface",
+                "multilanguage",
+                "translation",
+                "ui",
+                "webinterface"
+            ],
+            "time": "2014-09-09 15:47:55"
+        },
+        {
+            "name": "knplabs/knp-components",
+            "version": "1.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/knp-components.git",
+                "reference": "8803fdaa18bd24bd158143e3d9099f4b243a31dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/8803fdaa18bd24bd158143e3d9099f4b243a31dd",
+                "reference": "8803fdaa18bd24bd158143e3d9099f4b243a31dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "suggest": {
+                "doctrine/common": "to allow usage pagination with Doctrine ArrayCollection",
+                "doctrine/mongodb-odm": "to allow usage pagination with Doctrine ODM MongoDB",
+                "doctrine/orm": "to allow usage pagination with Doctrine ORM",
+                "propel/propel1": "to allow usage pagination with Propel ORM",
+                "ruflin/Elastica": "to allow usage pagination with ElasticSearch Client",
+                "solarium/solarium": "to allow usage pagination with Solarium Client"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Component": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/knp-components/contributors"
+                }
+            ],
+            "description": "Knplabs component library",
+            "homepage": "http://github.com/KnpLabs/knp-components",
+            "keywords": [
+                "components",
+                "knp",
+                "knplabs",
+                "pager",
+                "paginator"
+            ],
+            "time": "2014-01-09 16:23:31"
+        },
+        {
             "name": "knplabs/knp-disqus-bundle",
             "version": "dev-master",
             "target-dir": "Knp/Bundle/DisqusBundle",
@@ -1407,6 +1535,65 @@
                 "menu"
             ],
             "time": "2014-08-01 09:57:23"
+        },
+        {
+            "name": "knplabs/knp-paginator-bundle",
+            "version": "2.4.1",
+            "target-dir": "Knp/Bundle/PaginatorBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
+                "reference": "701dffe02dbe4aa8784d3d9e5343985318ef5e2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/701dffe02dbe4aa8784d3d9e5343985318ef5e2c",
+                "reference": "701dffe02dbe4aa8784d3d9e5343985318ef5e2c",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/knp-components": "~1.2",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.0",
+                "twig/twig": "~1.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Bundle\\PaginatorBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony2 Community",
+                    "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle/contributors"
+                }
+            ],
+            "description": "Paginator bundle for Symfony2 to automate pagination and simplify sorting and other features",
+            "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle",
+            "keywords": [
+                "Symfony2",
+                "bundle",
+                "knp",
+                "knplabs",
+                "pager",
+                "pagination",
+                "paginator"
+            ],
+            "time": "2014-09-15 15:49:24"
         },
         {
             "name": "knplabs/knp-time-bundle",
@@ -1593,12 +1780,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "627f52bf6d1b2510d1c2f369bc60ed9d71e58e42"
+                "reference": "38f4d2ed7135782474628b64e5c1623b649fdac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/627f52bf6d1b2510d1c2f369bc60ed9d71e58e42",
-                "reference": "627f52bf6d1b2510d1c2f369bc60ed9d71e58e42",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/38f4d2ed7135782474628b64e5c1623b649fdac2",
+                "reference": "38f4d2ed7135782474628b64e5c1623b649fdac2",
                 "shasum": ""
             },
             "require": {
@@ -1658,7 +1845,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2014-09-03 10:27:37"
+            "time": "2014-09-17 09:58:36"
         },
         {
             "name": "monolog/monolog",
@@ -1727,6 +1914,50 @@
                 "psr-3"
             ],
             "time": "2014-06-04 16:30:04"
+        },
+        {
+            "name": "nikic/php-parser",
+            "version": "v0.9.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "1e5e280ae88a27effa2ae4aa2bd088494ed8594f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1e5e280ae88a27effa2ae4aa2bd088494ed8594f",
+                "reference": "1e5e280ae88a27effa2ae4aa2bd088494ed8594f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PHPParser": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "time": "2013-08-25 17:11:40"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -2824,17 +3055,17 @@
         },
         {
             "name": "zendframework/zend-code",
-            "version": "2.3.1",
+            "version": "2.3.3",
             "target-dir": "Zend/Code",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendCode.git",
-                "reference": "3e7cc92f946c23fb28959457fa0608c5eba29ed8"
+                "reference": "78ea301533dd05f1c1759e8928d119804900446b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendCode/zipball/3e7cc92f946c23fb28959457fa0608c5eba29ed8",
-                "reference": "3e7cc92f946c23fb28959457fa0608c5eba29ed8",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendCode/zipball/78ea301533dd05f1c1759e8928d119804900446b",
+                "reference": "78ea301533dd05f1c1759e8928d119804900446b",
                 "shasum": ""
             },
             "require": {
@@ -2866,25 +3097,26 @@
                 "BSD-3-Clause"
             ],
             "description": "provides facilities to generate arbitrary code using an object oriented interface",
+            "homepage": "https://github.com/zendframework/zf2",
             "keywords": [
                 "code",
                 "zf2"
             ],
-            "time": "2014-04-15 15:28:49"
+            "time": "2014-09-16 22:58:11"
         },
         {
             "name": "zendframework/zend-eventmanager",
-            "version": "2.3.1",
+            "version": "2.3.3",
             "target-dir": "Zend/EventManager",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendEventManager.git",
-                "reference": "957faa0580c40ef6bf6cf3e87a36d594042fe133"
+                "reference": "4110fe64b10616b9bb71429a206d8e9e6d99e3ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendEventManager/zipball/957faa0580c40ef6bf6cf3e87a36d594042fe133",
-                "reference": "957faa0580c40ef6bf6cf3e87a36d594042fe133",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendEventManager/zipball/4110fe64b10616b9bb71429a206d8e9e6d99e3ba",
+                "reference": "4110fe64b10616b9bb71429a206d8e9e6d99e3ba",
                 "shasum": ""
             },
             "require": {
@@ -2907,25 +3139,26 @@
             "license": [
                 "BSD-3-Clause"
             ],
+            "homepage": "https://github.com/zendframework/zf2",
             "keywords": [
                 "eventmanager",
                 "zf2"
             ],
-            "time": "2014-04-15 14:47:18"
+            "time": "2014-09-16 22:58:11"
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.3.1",
+            "version": "2.3.3",
             "target-dir": "Zend/Stdlib",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "c1f4830018b5d4f034d32fa01a9e17ea176f56f6"
+                "reference": "fa33e6647f830d0d2a1cb451efcdfe1bb9a66c33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/c1f4830018b5d4f034d32fa01a9e17ea176f56f6",
-                "reference": "c1f4830018b5d4f034d32fa01a9e17ea176f56f6",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/fa33e6647f830d0d2a1cb451efcdfe1bb9a66c33",
+                "reference": "fa33e6647f830d0d2a1cb451efcdfe1bb9a66c33",
                 "shasum": ""
             },
             "require": {
@@ -2957,11 +3190,12 @@
             "license": [
                 "BSD-3-Clause"
             ],
+            "homepage": "https://github.com/zendframework/zf2",
             "keywords": [
                 "stdlib",
                 "zf2"
             ],
-            "time": "2014-04-15 15:28:48"
+            "time": "2014-09-16 22:58:11"
         }
     ],
     "packages-dev": [
@@ -3023,7 +3257,8 @@
         "knplabs/knp-time-bundle": 20,
         "knplabs/knp-disqus-bundle": 20,
         "jms/di-extra-bundle": 20,
-        "liip/imagine-bundle": 20
+        "liip/imagine-bundle": 20,
+        "jms/translation-bundle": 20
     },
     "prefer-stable": false,
     "platform": {

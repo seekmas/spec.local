@@ -18,9 +18,30 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\OneToOne(targetEntity="Privates" , mappedBy="user")
+     */
+    protected $privates;
+
     public function __construct()
     {
         parent::__construct();
         // your own logic
+    }
+
+    /**
+     * @param mixed $privates
+     */
+    public function setPrivates($privates)
+    {
+        $this->privates = $privates;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrivates()
+    {
+        return $this->privates;
     }
 }

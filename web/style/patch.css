@@ -2,3 +2,7 @@
     width: 120px;
     vertical-align: middle;
 }
+
+textarea {
+    height: 400px;
+}

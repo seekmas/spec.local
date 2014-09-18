@@ -12,6 +12,13 @@
     <link href="{{ asset('bracket/css/style.default.css') }}" rel="stylesheet">
     <link href="{{ asset('video-js/video-js.css') }}" rel="stylesheet">
     <link href="{{ asset('style/patch.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('bracket/css/bootstrap-fileupload.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bracket/css/bootstrap-timepicker.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bracket/css/jquery.tagsinput.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bracket/css/colorpicker.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bracket/css/dropzone.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bracket/css/bootstrap-wysihtml5.css') }}" />
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/font-awesome.min.css') }}">
     {% endblock %}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -58,10 +65,10 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                            <li><a href="profile.html"><i class="glyphicon glyphicon-user"></i> My Profile</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Account Settings</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i> Help</a></li>
-                            <li><a href="signin.html"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
+                            <li><a href="{{ url('user_home') }}"><i class="glyphicon glyphicon-user"></i> 个人信息 / 隐私</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 支付</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i> 帮助</a></li>
+                            <li><a href="{{ url('fos_user_security_logout') }}"><i class="glyphicon glyphicon-log-out"></i> 注销</a></li>
                         </ul>
                     </div>
                 </li>
@@ -78,27 +85,29 @@
     <div class="pageheader">
         <h2><i class="fa fa-user"></i> {% block moduleName %}{% endblock %}</h2>
         <div class="breadcrumb-wrapper">
-            <span class="label">You are here:</span>
+            <span class="label">你当前的位置:</span>
             <ol class="breadcrumb">
-                <li><a href="index.html">Bracket</a></li>
-                <li><a href="index.html">Pages</a></li>
-                <li class="active">People Directory</li>
+                <li><a href="index.html">精益云学院首页</a></li>
+                {% block navigation %}{% endblock %}
             </ol>
         </div>
     </div>
 
     <div class="contentpanel">
 
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="alert alert-{{ type }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
 
-        <div class="people-list">
-            <div class="row">
 
+        <div class="row">
+            {% block body %}{% endblock %}
+        </div><!-- row -->
 
-                {% block body %}{% endblock %}
-
-
-            </div><!-- row -->
-        </div><!-- people-list -->
 
     </div><!-- contentpanel -->
 

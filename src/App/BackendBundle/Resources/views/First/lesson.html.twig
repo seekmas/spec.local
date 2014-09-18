@@ -1,0 +1,57 @@
+{% extends "AppBackendBundle:Theme:layouts.html.twig" %}
+
+{% block moduleName %}
+
+    课程 & 章节
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+
+
+    <div class="col-md-6">
+
+        <div class="panel panel-primary panel-alt">
+
+            <div class="panel-heading">
+                <div class="panel-btns">
+                    <a href="#" class="panel-close">×</a>
+                    <a href="#" class="minimize">−</a>
+                </div><!-- panel-btns -->
+                <h3 class="panel-title">创建新课程</h3>
+
+            </div>
+            <div class="panel-body">
+                {% include "AppBackendBundle:First:lesson_create.html.twig" %}
+            </div>
+
+        </div>
+
+
+    </div>
+
+        <div class="col-md-6">
+
+            <div class="panel panel-success panel-alt">
+
+                <div class="panel-heading">
+                    <div class="panel-btns">
+                        <a href="#" class="panel-close">×</a>
+                        <a href="#" class="minimize">−</a>
+                    </div><!-- panel-btns -->
+                    <h3 class="panel-title">所有课程</h3>
+                </div>
+
+                <div class="panel-body">
+                    {% include "AppBackendBundle:First:lesson_list.html.twig" %}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

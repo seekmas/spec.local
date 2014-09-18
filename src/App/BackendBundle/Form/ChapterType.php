@@ -16,7 +16,7 @@ class ChapterType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('photo' , 'file')
+            ->add('photo' , 'file' , ['required' => false ])
             ->add('shortDescription')
             ->add('longDescription')
             ->add('content')

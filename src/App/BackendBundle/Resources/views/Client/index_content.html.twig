@@ -1,0 +1,32 @@
+
+<h5 class="subtitle mb5">Table With Actions</h5>
+<p class="mb20">An example of table with actions in every rows.</p>
+<div class="table-responsive">
+    <table class="table mb30">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.lastLogin | date('Y-m-d H:i:s') }}</td>
+            <td class="table-action">
+                <a href="#"><i class="fa fa-pencil"></i></a>
+                <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div><!-- table-responsive -->

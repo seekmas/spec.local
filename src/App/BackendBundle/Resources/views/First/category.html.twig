@@ -1,0 +1,57 @@
+{% extends "AppBackendBundle:Theme:layouts.html.twig" %}
+
+{% block moduleName %}
+
+    课程分类
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+
+
+        <div class="col-md-6">
+
+            <div class="panel panel-primary panel-alt">
+
+                <div class="panel-heading">
+                    <div class="panel-btns">
+                        <a href="#" class="panel-close">×</a>
+                        <a href="#" class="minimize">−</a>
+                    </div><!-- panel-btns -->
+                    <h3 class="panel-title">创建新分类</h3>
+
+                </div>
+                <div class="panel-body">
+                    {% include "AppBackendBundle:First:category_create.html.twig" %}
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="panel panel-success panel-alt">
+
+                <div class="panel-heading">
+                    <div class="panel-btns">
+                        <a href="#" class="panel-close">×</a>
+                        <a href="#" class="minimize">−</a>
+                    </div><!-- panel-btns -->
+                    <h3 class="panel-title">所有分类</h3>
+                </div>
+
+                <div class="panel-body">
+                    {% include "AppBackendBundle:First:category_list.html.twig" %}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

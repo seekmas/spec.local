@@ -1,0 +1,34 @@
+
+<h5 class="subtitle mb5">更新/删除 课程</h5>
+<p class="mb20">这里有云学院的所有课程</p>
+<div class="table-responsive">
+    <table class="table mb30">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>封面</th>
+            <th>课程</th>
+            <th>章节</th>
+            <th>价格</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for lesson in lessons %}
+        <tr>
+            <td>#{{ lesson.id }}</td>
+            <td><img class="img-thumbnail" src="{{ lesson.photo | imagine_filter('lessonTiny') }}" /></td>
+            <td>{{ lesson.name }} <br/>( {{ lesson.category }} )</td>
+            <td>{{ lesson.chapter | length }}</td>
+            <td>{{ lesson.price | currency | raw }}</td>
+            <td class="table-action">
+                <a href="{{ url('create_chapter' , {'lessonId':lesson.id}) }}" title="chapter"><i class="fa fa-list"></i></a>
+                <a href="{{ url('create_lesson' , {'id':lesson.id}) }}" title="edit"><i class="fa fa-pencil"></i></a>
+                <a href="#" class="delete-row" title="remove"><i class="fa fa-trash-o"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div><!-- table-responsive -->

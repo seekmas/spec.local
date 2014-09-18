@@ -24,6 +24,13 @@ class Lesson extends Photo
     /**
      * @var string
      *
+     * @ORM\Column(name="price", type="decimal" , precision=10, scale=2)
+     */
+    protected $price;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
@@ -34,6 +41,12 @@ class Lesson extends Photo
      * @ORM\Column(name="description", type="text")
      */
     private $description;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Category" , inversedBy="lesson")
+     * @ORM\JoinColumn(name="category_id" , referencedColumnName="id")
+     */
+    private $category;
 
     /**
      * @var integer
@@ -62,6 +75,22 @@ class Lesson extends Photo
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param string $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrice()
+    {
+        return $this->price;
     }
 
     /**
@@ -108,6 +137,22 @@ class Lesson extends Photo
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 
     /**

@@ -2,6 +2,15 @@ parameters:
 
 
 services:
+    #Twig
+    bool.twig.extension:
+        class: App\BackendBundle\TwigExtension\PageBoolExtension
+        tags:
+            - { name: twig.extension }
+    format.twig.extension:
+        class: App\BackendBundle\TwigExtension\FormatExtension
+        tags:
+            - { name: twig.extension }
     #File Upload
     file.upload:
         class: App\BackendBundle\Upload\FileUpload
@@ -19,3 +28,15 @@ services:
         factory_service: doctrine
         factory_method: getRepository
         arguments: [ App\BackendBundle\Entity\Chapter ]
+
+    category.entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ App\BackendBundle\Entity\Category ]
+
+    user.entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ App\BackendBundle\Entity\User ]

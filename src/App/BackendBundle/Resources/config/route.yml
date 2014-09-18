@@ -1,3 +1,11 @@
 frist_admin:
     resource: "@AppBackendBundle/Controller/FirstController.php"
     type:     annotation
+
+dashboard_admin:
+    resource: "@AppBackendBundle/Controller/DashboardController.php"
+    type:     annotation
+
+client:
+    resource: "@AppBackendBundle/Controller/ClientController.php"
+    type:     annotation

@@ -12,9 +12,37 @@ class CoreController extends Controller
 
     public function getForm(Request $request , AbstractType $type , $entity)
     {
+
+        if(method_exists($entity,'setCreatedAt') )
+        {
+
+        }
+
         $form = $this->createForm($type,$entity);
         $form->handleRequest($request);
         return $form;
+    }
+
+    public function tmpPhotoHandle($entity)
+    {
+        if(method_exists($entity,'setPhoto') )
+        {
+            $tmp = $entity->getPhoto();
+            $entity->setPhoto(null);
+            return $tmp;
+        }
+        return ;
+    }
+
+    public function resetEntity($entity,$tmpPhoto)
+    {
+        if(method_exists($entity,'setPhoto') && $tmpPhoto )
+        {
+            $tmp = $entity->getPhoto();
+            $entity->setPhoto($tmpPhoto);
+            return $tmp;
+        }
+        return ;
     }
 
     public function to($route,$params = [])
@@ -27,7 +55,7 @@ class CoreController extends Controller
         $this->get('session')->getFlashBag()->add($type,$message);
     }
 
-    public function processForm($form , $entity)
+    public function processForm($form , $entity , $tmpPhoto = null)
     {
         if(method_exists($entity,'setCreatedAt') )
         {
@@ -40,7 +68,13 @@ class CoreController extends Controller
             $photo = $data->getPhoto();
             if($photo)
             {
+                if($tmpPhoto)
+                    $this->get('file.upload')->remove($tmpPhoto);
+
                 $entity->setPhoto($this->get('file.upload')->save($photo,'uploads/lesson'));
+            }else
+            {
+                $entity->setPhoto($tmpPhoto);
             }
         }
 

@@ -16,8 +16,10 @@ class LessonType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('price')
+            ->add('category')
             ->add('description')
-            ->add('photo' , 'file')
+            ->add('photo' , 'file' , ['required' => false])
         ;
 
         $builder->add('submit' , 'submit');

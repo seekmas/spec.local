@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\AopBundle\JMSAopBundle(),
+            new JMS\TranslationBundle\JMSTranslationBundle(),
 
             new Liip\ImagineBundle\LiipImagineBundle(),
 
