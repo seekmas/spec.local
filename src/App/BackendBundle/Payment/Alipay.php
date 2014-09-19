@@ -150,7 +150,7 @@ class Alipay implements PaymentInterface
 
     public function finishPayment($file)
     {
-        $post = json_encode($_POST);
+        $post = json_encode($_GET);
         file_put_contents('../'.$file.'.txt' , $post , FILE_APPEND);
     }
 
