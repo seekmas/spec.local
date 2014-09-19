@@ -10,5 +10,5 @@ interface PaymentInterface
     public function createOrder(Lesson $lesson , User $user);
     public function createPayment($orderId);
     public function orderIsExist(Lesson $lesson , User $user , $statusId);
-    public function finishPayment();
+    public function finishPayment($file);
 }

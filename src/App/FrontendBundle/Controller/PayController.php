@@ -19,6 +19,7 @@ class PayController extends CoreController
     public function indexAction(Request $request , $lessonId)
     {
         $lesson = $this->get('lesson.entity')->find($lessonId);
+        $payment = $this->get('alipay.payment');
 
         if($lesson == NULL)
         {
@@ -26,14 +27,17 @@ class PayController extends CoreController
         }
 
         $user = $this->getUser();
-        $purchase = $this->get('alipay.payment')->orderIsExist($lesson,$user,PurchaseStatus::Cart);
+        $purchase = $payment->orderIsExist($lesson,$user,PurchaseStatus::Cart);
 
         if( $purchase == NULL)
         {
-            $purchase = $this->get('alipay.payment')->createOrder($lesson,$user);
+            $purchase = $payment->createOrder($lesson,$user);
         }
 
-        echo $this->get('alipay.payment')->createPayment($purchase->getId());
+        echo $this->get('alipay.payment')
+             ->setNotify('finish_payment_notify')
+             ->setAnsy('finish_payment_ansy')
+             ->createPayment($purchase->getId());
 
         return [];
     }
@@ -44,20 +48,23 @@ class PayController extends CoreController
      */
     public function cartAction(Request $request , $lessonId)
     {
+        $payment = $this->get('alipay.payment');
+
         $lesson = $this->get('lesson.entity')->find($lessonId);
+
         if($lesson == NULL)
         {
             $this->flash('danger' , '找不到课程');
         }
         $user = $this->getUser();
-        $exist = $this->get('alipay.payment')->orderIsExist($lesson,$user,PurchaseStatus::Cart);
+        $exist = $payment->orderIsExist($lesson,$user,PurchaseStatus::Cart);
 
         if( $exist)
         {
             $this->flash('success' , '已经添加成功');
         }else
         {
-            $purchase = $this->get('alipay.payment')->createOrder($lesson,$user);
+            $purchase = $payment->createOrder($lesson,$user);
             if( $purchase->getId())
                 $this->flash('success' , '已经添加成功');
             else
@@ -65,5 +72,29 @@ class PayController extends CoreController
         }
 
         return $this->to('home_lesson' , ['id'=>$lessonId]);
+    }
+
+    /**
+     * @Route("/finish_payment_notify" , name="finish_payment_notify")
+     * @Template()
+     */
+    public function finishNotifyAction(Request $request)
+    {
+        $payment = $this->get('alipay.payment');
+        $payment->finishPayment('notify');
+
+        return [];
+    }
+
+    /**
+     * @Route("/finish_payment_ansy" , name="finish_payment_ansy")
+     * @Template()
+     */
+    public function finishAnsyAction(Request $request)
+    {
+        $payment = $this->get('alipay.payment');
+        $payment->finishPayment('return');
+
+        return [];
     }
 }

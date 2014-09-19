@@ -27,7 +27,6 @@ class FirstController extends CoreController
             $lessons = $this->get('lesson.entity')->findBy(['categoryId'=>$categoryId]);
         }
 
-
         $categories = $this->get('category.entity')->findAll();
 
         return [

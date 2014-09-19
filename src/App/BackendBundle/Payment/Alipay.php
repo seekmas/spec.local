@@ -24,6 +24,10 @@ class Alipay implements PaymentInterface
 
     protected $container;
 
+    protected $notify;
+
+    protected $ansy;
+
     /**
      * @DI\InjectParams({
      *      "entityManager"  = @DI\Inject("doctrine.orm.entity_manager") ,
@@ -50,7 +54,7 @@ class Alipay implements PaymentInterface
         $purchase->setPrice($lesson->getPrice());
         $purchase->setStatusId(PurchaseStatus::Cart);
         $purchase->setCreatedAt(new \Datetime());
-        $this->entityManager = $this->getEntityManager();
+
         $this->entityManager->persist($purchase);
         $this->entityManager->flush();
 
@@ -77,54 +81,40 @@ class Alipay implements PaymentInterface
         $config = $this->getParams();
         $alipay_config['partner'] = $config->getPid();
         $alipay_config['key'] = $config->getPkey();
-
         //签名方式 不需修改
         $alipay_config['sign_type']    = strtoupper('MD5');
-
         //字符编码格式 目前支持 gbk 或 utf-8
         $alipay_config['input_charset']= strtolower('utf-8');
-
         //ca证书路径地址，用于curl中ssl校验
         //请保证cacert.pem文件在当前文件夹目录中
         $alipay_config['cacert']    = $this->container->get('kernel')->getRootDir().'/../vendor/mot/alipay/cacert.pem';
-
         //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
         $alipay_config['transport']    = 'http';
-
         //支付类型
         $payment_type = "1";
         //必填，不能修改
         //服务器异步通知页面路径
-        $notify_url = "http://www.xxx.com/create_direct_pay_by_user-PHP-UTF-8/notify_url.php";
+        $notify_url = $this->container->get('router')->generate( $this->getNotify() , [] , UrlGeneratorInterface::ABSOLUTE_URL);
         //需http://格式的完整路径，不能加?id=123这类自定义参数
-
         //页面跳转同步通知页面路径
-        $return_url = "http://www.xxx.com/create_direct_pay_by_user-PHP-UTF-8/return_url.php";
+        $return_url = $this->container->get('router')->generate( $this->getAnsy() , [] , UrlGeneratorInterface::ABSOLUTE_URL);
         //需http://格式的完整路径，不能加?id=123这类自定义参数，不能写成http://localhost/
-
         //卖家支付宝帐户
         $seller_email = 'Mwang@36lean.com';
         //必填
-
         //商户订单号
         $out_trade_no = $order->getTradeId();
         //商户网站订单系统中唯一订单号，必填
-
         //订单名称
         $subject = '在线课程: '.$order->getLesson()->getName();
         //必填
-
         //付款金额
         $total_fee = $order->getPrice();
         //必填
-
         //订单描述
-
         $body = '购买在线课程 《'.$order->getLesson()->getName().'》';
         //商品展示地址
         $show_url = $this->container->get('router')->generate('home_lesson', ['id'=>$order->getLessonId()] , UrlGeneratorInterface::ABSOLUTE_URL);
-        //需以http://开头的完整路径，例如：http://www.xxx.com/myorder.html
-
         //防钓鱼时间戳
         $anti_phishing_key = "";
         //若要使用请调用类文件submit中的query_timestamp函数
@@ -132,7 +122,6 @@ class Alipay implements PaymentInterface
         //客户端的IP地址
         $exter_invoke_ip = $this->container->get('request')->getClientIp();;
         //非局域网的外网IP地址，如：221.0.0.1
-
 
         /************************************************************/
 
@@ -158,7 +147,12 @@ class Alipay implements PaymentInterface
         $alipaySubmit = new \AlipaySubmit($alipay_config);
         $html_text = $alipaySubmit->buildRequestForm($parameter,"get", "跳转到支付宝付款");
         echo $html_text;
+    }
 
+    public function finishPayment($file)
+    {
+        $post = json_encode($_POST);
+        file_put_contents('../'.$file.'.txt' , $post , FILE_APPEND);
     }
 
     protected function getParams()
@@ -166,10 +160,35 @@ class Alipay implements PaymentInterface
         return $this->container->get('alipay.entity')->findOneBy(['isDefault'=>true]);
     }
 
-    public function finishPayment()
+    /**
+     * @param mixed $ansy
+     */
+    public function setAnsy($ansy)
     {
-        // TODO: Implement finishPayment() method.
+        $this->ansy = $ansy;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getAnsy()
+    {
+        return $this->ansy;
+    }
 
+    /**
+     * @param mixed $notify
+     */
+    public function setNotify($notify)
+    {
+        $this->notify = $notify;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNotify()
+    {
+        return $this->notify;
+    }
 }
