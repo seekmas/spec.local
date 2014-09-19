@@ -26,12 +26,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PayController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PayController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.36551723" vertical-offset="428" max-vertical-offset="1680">
+            <state line="41" column="18" selection-start="1240" selection-end="1240" vertical-scroll-proportion="-9.12" vertical-offset="428" max-vertical-offset="1680">
               <folding>
                 <element signature="e#49#97#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Alipay.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="195" column="5" selection-start="5836" selection-end="5836" vertical-scroll-proportion="0.86206895" vertical-offset="2620" max-vertical-offset="3232">
+              <folding>
+                <element signature="e#45#82#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,8 +107,8 @@
         <option value="$PROJECT_DIR$/app/logs/dev.log" />
         <option value="$PROJECT_DIR$/app/logs/prod.log" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Payment/PaymentInterface.php" />
-        <option value="$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php" />
         <option value="$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php" />
+        <option value="$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php" />
       </list>
     </option>
   </component>
@@ -289,6 +300,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BackendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Payment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -731,20 +768,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php">
+    <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="68" selection-start="5140" selection-end="5140" vertical-scroll-proportion="0.8344827" vertical-offset="1980" max-vertical-offset="3184">
+        <state line="41" column="18" selection-start="1240" selection-end="1240" vertical-scroll-proportion="-9.12" vertical-offset="428" max-vertical-offset="1680">
           <folding>
-            <element signature="e#45#82#0" expanded="true" />
+            <element signature="e#49#97#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php">
+    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.36551723" vertical-offset="428" max-vertical-offset="1680">
+        <state line="195" column="5" selection-start="5836" selection-end="5836" vertical-scroll-proportion="0.86206895" vertical-offset="2620" max-vertical-offset="3232">
           <folding>
-            <element signature="e#49#97#0" expanded="true" />
+            <element signature="e#45#82#0" expanded="true" />
           </folding>
         </state>
       </provider>

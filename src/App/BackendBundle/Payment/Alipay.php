@@ -75,7 +75,6 @@ class Alipay implements PaymentInterface
 
     public function createPayment($orderId)
     {
-
         $order = $this->container->get('purchase.entity')->find($orderId);
 
         $config = $this->getParams();
@@ -162,10 +161,12 @@ class Alipay implements PaymentInterface
 
     /**
      * @param mixed $ansy
+     * @return Alipay
      */
     public function setAnsy($ansy)
     {
         $this->ansy = $ansy;
+        return $this;
     }
 
     /**
@@ -178,10 +179,12 @@ class Alipay implements PaymentInterface
 
     /**
      * @param mixed $notify
+     * @return Alipay
      */
     public function setNotify($notify)
     {
         $this->notify = $notify;
+        return $this;
     }
 
     /**
