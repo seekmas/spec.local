@@ -129,6 +129,7 @@
     <script src="{{ asset('video-js/video.js') }}"></script>
     <script src="{{ asset('bracket/js/wysihtml5-0.3.0.min.js') }}"></script>
     <script src="{{ asset('bracket/js/bootstrap-wysihtml5.js') }}"></script>
+    <script src="{{ asset('scrollto/lib/jquery-scrollto.js') }}"></script>
     <script>
         jQuery(document).ready(function(){
             jQuery('textarea').wysihtml5(
@@ -144,6 +145,7 @@
             );
         });
     </script>
+
 {% endblock %}
 <script>
     videojs.options.flash.swf = "{{ asset('video-js/video-js.swf') }}";

@@ -58,7 +58,22 @@ services:
         factory_method: getRepository
         arguments: [ App\BackendBundle\Entity\Thread ]
 
+    reply.entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ App\BackendBundle\Entity\Reply ]
+
+    alipay.entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ App\BackendBundle\Entity\Alipay ]
     #pagination
     thread.paginator:
         class: App\BackendBundle\Pagination\KnpPagination
         arguments: [ @knp_paginator , @thread.entity , @request_stack ]
+
+    reply.paginator:
+        class: App\BackendBundle\Pagination\KnpPagination
+        arguments: [ @knp_paginator , @reply.entity , @request_stack ]

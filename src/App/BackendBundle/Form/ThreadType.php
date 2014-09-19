@@ -36,6 +36,6 @@ class ThreadType extends AbstractType
      */
     public function getName()
     {
-        return 'app_backendbundle_thread';
+        return 'thread';
     }
 }

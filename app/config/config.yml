@@ -94,6 +94,10 @@ liip_imagine:
 
     filter_sets:
         cache: ~
+        avatar:
+            quality: 100
+            filters:
+                thumbnail: { size: [35,35], mode: outbound }
         tiny:
             quality: 100
             filters:
@@ -106,6 +110,10 @@ liip_imagine:
             quality: 100
             filters:
                 thumbnail: { size: [120,90], mode: outbound }
+        uploadPreview:
+           quality: 100
+           filters:
+                thumbnail: { size: [120,92], mode: outbound }
         lessonTiny:
             quality: 100
             filters:
@@ -119,5 +127,11 @@ knp_paginator:
         sort_direction_name: direction # sort direction query parameter name
         distinct: true                 # ensure distinct results, useful when ORM queries are using GROUP BY statements
     template:
-        pagination: KnpPaginatorBundle:Pagination:sliding.html.twig     # sliding pagination controls template
+        pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig     # sliding pagination controls template
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
+
+app_backend:
+    notify_email: service@symfonytutorial.com
+#    alipay:
+#        pid: 2088112046306645
+#        key: hccm38c03lsu819dze4oxrpfxu9qz35n

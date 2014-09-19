@@ -40,6 +40,6 @@ class LessonType extends AbstractType
      */
     public function getName()
     {
-        return 'app_backendbundle_lesson';
+        return 'lesson';
     }
 }

@@ -71,7 +71,7 @@ class CoreController extends Controller
                 if($tmpPhoto)
                     $this->get('file.upload')->remove($tmpPhoto);
 
-                $entity->setPhoto($this->get('file.upload')->save($photo,'uploads/lesson'));
+                $entity->setPhoto($this->get('file.upload')->save($photo,'uploads/'.$form->getName()));
             }else
             {
                 $entity->setPhoto($tmpPhoto);

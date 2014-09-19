@@ -37,6 +37,6 @@ class RequirementType extends AbstractType
      */
     public function getName()
     {
-        return 'app_backendbundle_requirement';
+        return 'requirement';
     }
 }

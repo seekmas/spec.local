@@ -71,6 +71,10 @@ class Thread
      */
     private $isLocked;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Reply" , mappedBy="thread")
+     */
+    private $reply;
 
     /**
      * Get id
@@ -235,4 +239,21 @@ class Thread
     {
         return $this->isLocked;
     }
+
+    /**
+     * @param mixed $reply
+     */
+    public function setReply($reply)
+    {
+        $this->reply = $reply;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getReply()
+    {
+        return $this->reply;
+    }
+
 }

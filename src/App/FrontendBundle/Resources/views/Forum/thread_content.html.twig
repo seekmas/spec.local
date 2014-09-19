@@ -1,3 +1,18 @@
+
+<div class="pull-right">
+
+    <div class="btn-group mr5">
+        <button id="reply_thread" class="btn btn-white" type="button"><i class="fa fa-reply"></i> 回复</button>
+    </div>
+
+</div>
+
+<div class="btn-group mr10">
+    <a href="{{ url('thread' , {'id' : thread.id-1}) }}" class="btn btn-white tooltips" title=""><i class="glyphicon glyphicon-chevron-left"></i></a>
+    <a href="{{ url('thread' , {'id' : thread.id+1}) }}" class="btn btn-white tooltips" title=""><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+
+
 <div class="read-panel">
 
     <div class="media">
@@ -13,16 +28,67 @@
 
     <h4 class="email-subject">{{ thread.subject }}</h4>
 
-    {{ thread.content | raw }}
+        {{ thread.content | raw }}
 
     <br>
+    <hr/>
+
+
+    <div class="activity-list">
+
+        {% for key,reply in replies %}
+        <div class="media act-media">
+            <a class="pull-left" href="#">
+                <img class="media-object" src="{{ asset(reply.user.privates.photo) | imagine_filter('avatar') }}" alt="">
+            </a>
+
+            <div class="pull-right"><small class="text-muted">{{ time_diff(reply.createdAt) }}</small></div>
+
+            <div class="media-body act-media-body">
+
+                <span class="label label-default">{{ key+1 }}楼</span>
+
+                <strong>{{ reply.user.username }}</strong> 的回复 <br>
+                <small class="text-muted">{{ thread.user.email }}</small>
+
+
+                <div class="media blog-media">
+                    {% if reply.photo %}
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="{{ asset(reply.photo) | imagine_filter('uploadPreview') }}" alt="">
+                    </a>
+                    {% endif %}
+                    <div class="media-body">
+                        {{ reply.content | raw }}
+                    </div>
+                </div><!-- media -->
+
+            </div>
+        </div><!-- media -->
+        {% endfor %}
+        <div class="navigation">
+            {{ knp_pagination_render(replies) }}
+        </div>
+
+    </div>
+
 
     <div class="media">
+
         <a href="#" class="pull-left">
             <img alt="" src="{{ asset(app.user.privates.photo) }}" class="media-object">
         </a>
-        <div class="media-body">
-            <textarea class="form-control" placeholder="Reply here..."></textarea>
+        <div id="create_new_reply" class="media-body">
+
+            {% if thread.isLocked %}
+
+                帖子已经被锁定 无法回复
+
+            {% else %}
+
+                {{ form(form) }}
+
+            {% endif %}
         </div>
     </div><!-- media -->
 

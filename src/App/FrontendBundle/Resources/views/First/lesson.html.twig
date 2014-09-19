@@ -19,7 +19,7 @@
 
         <div class="mb20"></div>
 
-        <a class="btn btn-success mr5"><i class="fa fa-user"></i> 购买课程</a>
+        <a class="btn btn-success mr5" href="{{ url('payment' , {'lessonId':lesson.id}) }}"><i class="fa fa-user"></i> 购买课程</a>
 
         <a class="btn btn-primary mr5" href="{{ url('cart' , {'lessonId':lesson.id}) }}"><i class="fa fa-shopping-cart"></i> 加入购物车</a>
 

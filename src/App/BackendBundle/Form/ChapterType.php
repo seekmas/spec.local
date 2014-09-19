@@ -45,6 +45,6 @@ class ChapterType extends AbstractType
      */
     public function getName()
     {
-        return 'app_backendbundle_chapter';
+        return 'chapter';
     }
 }

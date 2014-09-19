@@ -14,8 +14,15 @@ class Configuration implements  ConfigurationInterface
 
         $rootNode->children()
                     ->scalarNode('notify_email')
-                        ->defaultValue('service@symfonytutorial.com')
-                    ->end();
+                    ->end()
+                    ->arrayNode('alipay')
+                        ->children()
+                            ->scalarNode('pid')->end()
+                            ->scalarNode('key')->end()
+                        ->end()
+                ->end()
+        ;
+
 
         return $treeBuilder;
     }

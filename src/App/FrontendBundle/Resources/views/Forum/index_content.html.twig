@@ -2,7 +2,14 @@
 <table class="table table-email">
 <tbody>
 
-{% for thread in threads %}
+<tr>
+    {# sorting of properties based on query components #}
+    <th>{{ knp_pagination_sortable(threads, 'Id', 'p.id') }}</th>
+    <th></th>
+    <th{% if threads.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(threads, '帖子标题', 'p.subject') }}</th>
+</tr>
+
+{% for thread in threads if thread.removedAt == null %}
 <tr>
     <td>
         #{{ thread.id }}
@@ -33,4 +40,9 @@
 
 </tbody>
 </table>
+
+    <div class="navigation">
+        {{ knp_pagination_render(threads) }}
+    </div>
+
 </div><!-- table-responsive -->

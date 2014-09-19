@@ -2,6 +2,7 @@
 
 namespace App\BackendBundle\Entity;
 
+use App\BackendBundle\Util\RandomDataGenerator;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -9,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class Purchase
 {
@@ -20,6 +22,11 @@ class Purchase
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+
+    /**
+     * @ORM\Column(name="trade_id" , type="string" , length=255)
+     */
+    private $tradeId;
 
     /**
      * @var integer
@@ -95,6 +102,22 @@ class Purchase
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param mixed $tradeId
+     */
+    public function setTradeId($tradeId)
+    {
+        $this->tradeId = $tradeId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTradeId()
+    {
+        return $this->tradeId;
     }
 
     /**
@@ -304,5 +327,13 @@ class Purchase
     public function getCreatedAt()
     {
         return $this->createdAt;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function generateTradeIdOnPrePersist()
+    {
+        $this->tradeId = RandomDataGenerator::getOrderId();
     }
 }

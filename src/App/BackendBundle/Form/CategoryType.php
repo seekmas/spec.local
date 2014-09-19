@@ -37,6 +37,6 @@ class CategoryType extends AbstractType
      */
     public function getName()
     {
-        return 'app_backendbundle_category';
+        return 'category';
     }
 }

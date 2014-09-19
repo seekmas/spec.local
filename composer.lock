@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "75d9302664139abfa8b5d9abc1c3f947",
+    "hash": "4528337f775577d9553aa964bbf36f0d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -626,16 +626,16 @@
         },
         {
             "name": "fabpot/goutte",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Goutte.git",
-                "reference": "104ef44a9fc8a8dfe66fef5f8e8deb4567f3dc7c"
+                "reference": "b12c3f7ec68d8814b50444cfe142fd0a056557f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/104ef44a9fc8a8dfe66fef5f8e8deb4567f3dc7c",
-                "reference": "104ef44a9fc8a8dfe66fef5f8e8deb4567f3dc7c",
+                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/b12c3f7ec68d8814b50444cfe142fd0a056557f9",
+                "reference": "b12c3f7ec68d8814b50444cfe142fd0a056557f9",
                 "shasum": ""
             },
             "require": {
@@ -663,9 +663,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "A simple PHP Web Scraper",
@@ -673,7 +671,7 @@
             "keywords": [
                 "scraper"
             ],
-            "time": "2014-05-13 05:05:35"
+            "time": "2014-07-22 13:24:11"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -1914,6 +1912,37 @@
                 "psr-3"
             ],
             "time": "2014-06-04 16:30:04"
+        },
+        {
+            "name": "mot/alipay",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/seekmas/alipay.git",
+                "reference": "c2451dabadfdf77d19d3392fa3cea48f6069026c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/seekmas/alipay/zipball/c2451dabadfdf77d19d3392fa3cea48f6069026c",
+                "reference": "c2451dabadfdf77d19d3392fa3cea48f6069026c",
+                "shasum": ""
+            },
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mot Wu",
+                    "email": "seekmas@msn.cn"
+                }
+            ],
+            "description": "This is a library from alipay",
+            "support": {
+                "source": "https://github.com/seekmas/alipay/tree/master",
+                "issues": "https://github.com/seekmas/alipay/issues"
+            },
+            "time": "2014-09-07 04:15:50"
         },
         {
             "name": "nikic/php-parser",
@@ -3258,7 +3287,8 @@
         "knplabs/knp-disqus-bundle": 20,
         "jms/di-extra-bundle": 20,
         "liip/imagine-bundle": 20,
-        "jms/translation-bundle": 20
+        "jms/translation-bundle": 20,
+        "mot/alipay": 20
     },
     "prefer-stable": false,
     "platform": {
