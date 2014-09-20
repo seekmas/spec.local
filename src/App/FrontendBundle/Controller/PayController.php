@@ -36,7 +36,7 @@ class PayController extends CoreController
 
         echo $this->get('alipay.payment')
              ->setNotify('finish_payment_notify')
-             ->setAnsy('finish_payment_ansy')
+             ->setSync('finish_payment_ansy')
              ->createPayment($purchase->getId());
 
         return [];

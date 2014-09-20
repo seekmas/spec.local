@@ -29,29 +29,16 @@
       <file leaf-file-name="PayController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="18" selection-start="1240" selection-end="1240" vertical-scroll-proportion="-9.12" vertical-offset="428" max-vertical-offset="1680">
-              <folding>
-                <element signature="e#49#97#0" expanded="true" />
-              </folding>
+            <state line="38" column="43" selection-start="1149" selection-end="1168" vertical-scroll-proportion="-20.48" vertical-offset="0" max-vertical-offset="1584">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Alipay.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Alipay.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="5" selection-start="5516" selection-end="5516" vertical-scroll-proportion="-31.0" vertical-offset="2025" max-vertical-offset="3232">
-              <folding>
-                <element signature="e#45#82#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="notify.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/notify.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="944">
+            <state line="164" column="5" selection-start="5322" selection-end="5322" vertical-scroll-proportion="0.2687704" vertical-offset="2281" max-vertical-offset="5072">
               <folding />
             </state>
           </provider>
@@ -126,6 +113,25 @@
     <option name="x" value="1365" />
     <option name="width" value="1922" />
     <option name="height" value="1081" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpellCheckingInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -202,92 +208,6 @@
               <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -337,6 +257,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -347,6 +293,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../store.local" />
     <property name="FullScreen" value="false" />
     <property name="SearchEverywhereHistory" value="" />
+    <property name="options.lastSelected" value="reference.settings.ide.settings.spelling" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -386,7 +336,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14479166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -425,197 +375,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Form/ChapterType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="16" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.7414722" vertical-offset="307" max-vertical-offset="864">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Form/LessonType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="17" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.7414722" vertical-offset="227" max-vertical-offset="784">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Form/CategoryType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="16" selection-start="908" selection-end="908" vertical-scroll-proportion="0.7414722" vertical-offset="179" max-vertical-offset="736">
-          <folding />
-        </state>
+        <state line="39" column="16" selection-start="908" selection-end="908" vertical-scroll-proportion="0.7414722" vertical-offset="179" max-vertical-offset="736" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Form/RequirementType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="16" selection-start="918" selection-end="918" vertical-scroll-proportion="0.7414722" vertical-offset="179" max-vertical-offset="736">
-          <folding />
-        </state>
+        <state line="39" column="16" selection-start="918" selection-end="918" vertical-scroll-proportion="0.7414722" vertical-offset="179" max-vertical-offset="736" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Form/ThreadType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="905" selection-end="905" vertical-scroll-proportion="0.7414722" vertical-offset="163" max-vertical-offset="720">
-          <folding />
-        </state>
+        <state line="38" column="16" selection-start="905" selection-end="905" vertical-scroll-proportion="0.7414722" vertical-offset="163" max-vertical-offset="720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Form/ReplyType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="56" selection-start="514" selection-end="514" vertical-scroll-proportion="0.2118492" vertical-offset="138" max-vertical-offset="720">
-          <folding />
-        </state>
+        <state line="18" column="56" selection-start="514" selection-end="514" vertical-scroll-proportion="0.2118492" vertical-offset="138" max-vertical-offset="720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/bracket/js/wysihtml5-0.3.0.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.216216" vertical-offset="3680" max-vertical-offset="4272">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.216216" vertical-offset="3680" max-vertical-offset="4272" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Knp/Bundle/PaginatorBundle/Resources/views/Pagination/twitter_bootstrap_pagination.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="33" selection-start="2607" selection-end="2612" vertical-scroll-proportion="0.64705884" vertical-offset="992" max-vertical-offset="1536">
-          <folding />
-        </state>
+        <state line="84" column="33" selection-start="2607" selection-end="2612" vertical-scroll-proportion="0.64705884" vertical-offset="992" max-vertical-offset="1536" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Pagination/KnpPagination.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="42" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.6896552" vertical-offset="432" max-vertical-offset="1312">
-          <folding />
-        </state>
+        <state line="52" column="42" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.6896552" vertical-offset="432" max-vertical-offset="1312" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/index_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="8" selection-start="569" selection-end="569" vertical-scroll-proportion="0.5241379" vertical-offset="0" max-vertical-offset="848">
-          <folding />
-        </state>
+        <state line="19" column="8" selection-start="569" selection-end="569" vertical-scroll-proportion="0.5241379" vertical-offset="0" max-vertical-offset="848" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Theme/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="4" selection-start="5939" selection-end="5939" vertical-scroll-proportion="0.69655174" vertical-offset="1948" max-vertical-offset="2560">
-          <folding />
-        </state>
+        <state line="147" column="4" selection-start="5939" selection-end="5939" vertical-scroll-proportion="0.69655174" vertical-offset="1948" max-vertical-offset="2560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="14" selection-start="1399" selection-end="1399" vertical-scroll-proportion="1.0827587" vertical-offset="380" max-vertical-offset="1104">
-          <folding />
-        </state>
+        <state line="63" column="14" selection-start="1399" selection-end="1399" vertical-scroll-proportion="1.0827587" vertical-offset="380" max-vertical-offset="1104" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/thread_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.7017241" vertical-offset="809" max-vertical-offset="1600">
-          <folding />
-        </state>
+        <state line="76" column="0" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.7017241" vertical-offset="809" max-vertical-offset="1600" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/CalenderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="1" selection-start="767" selection-end="767" vertical-scroll-proportion="0.66206896" vertical-offset="0" max-vertical-offset="580">
-          <folding />
-        </state>
+        <state line="26" column="1" selection-start="767" selection-end="767" vertical-scroll-proportion="0.66206896" vertical-offset="0" max-vertical-offset="580" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="518" selection-end="528" vertical-scroll-proportion="0.3586207" vertical-offset="0" max-vertical-offset="1456">
-          <folding />
-        </state>
+        <state line="13" column="45" selection-start="518" selection-end="528" vertical-scroll-proportion="0.3586207" vertical-offset="0" max-vertical-offset="1456" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/thread.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="564" selection-end="564" vertical-scroll-proportion="0.3862069" vertical-offset="0" max-vertical-offset="1008">
-          <folding />
-        </state>
+        <state line="14" column="28" selection-start="564" selection-end="564" vertical-scroll-proportion="0.3862069" vertical-offset="0" max-vertical-offset="1008" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/ForumController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="31" selection-start="2138" selection-end="2138" vertical-scroll-proportion="1.7931035" vertical-offset="0" max-vertical-offset="1200">
-          <folding />
-        </state>
+        <state line="72" column="31" selection-start="2138" selection-end="2138" vertical-scroll-proportion="1.7931035" vertical-offset="0" max-vertical-offset="1200" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Pay/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Entity/Purchase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="226" selection-end="226" vertical-scroll-proportion="0.41379312" vertical-offset="0" max-vertical-offset="5520">
-          <folding>
-            <element signature="e#44#91#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/mot/alipay/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.4551725" vertical-offset="3164" max-vertical-offset="3744">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Util/RandomDataGenerator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="0.11490126" vertical-offset="0" max-vertical-offset="557">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.4551725" vertical-offset="3164" max-vertical-offset="3744" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/fos.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/mot/alipay/notify_url.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="1" selection-start="1926" selection-end="1926" vertical-scroll-proportion="1.4413793" vertical-offset="140" max-vertical-offset="1200">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/First/lesson.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="85" selection-start="596" selection-end="596" vertical-scroll-proportion="-13.44" vertical-offset="0" max-vertical-offset="2768">
-          <folding />
-        </state>
+        <state line="21" column="85" selection-start="596" selection-end="596" vertical-scroll-proportion="-13.44" vertical-offset="0" max-vertical-offset="2768" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/app.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/DependencyInjection/AppBackendExtension.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="592">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="592" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Mailer/Mailer.php">
@@ -627,130 +494,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/DependencyInjection/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="23" selection-start="738" selection-end="738" vertical-scroll-proportion="0.6032316" vertical-offset="0" max-vertical-offset="557">
-          <folding />
-        </state>
+        <state line="22" column="23" selection-start="738" selection-end="738" vertical-scroll-proportion="0.6032316" vertical-offset="0" max-vertical-offset="557" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="4" selection-start="2037" selection-end="2050" vertical-scroll-proportion="0.5051546" vertical-offset="762" max-vertical-offset="1344">
-          <folding />
-        </state>
+        <state line="66" column="4" selection-start="2037" selection-end="2050" vertical-scroll-proportion="0.5051546" vertical-offset="762" max-vertical-offset="1344" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="46" selection-start="4202" selection-end="4234" vertical-scroll-proportion="0.831283" vertical-offset="1703" max-vertical-offset="2272">
-          <folding />
-        </state>
+        <state line="136" column="46" selection-start="4202" selection-end="4234" vertical-scroll-proportion="0.831283" vertical-offset="1703" max-vertical-offset="2272" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/DependencyInjection/AppFrontendExtension.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/DependencyInjection/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="569">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="569" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/AppFrontendBundle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/mot/alipay/alipayapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2073" selection-end="2630" vertical-scroll-proportion="0.14482759" vertical-offset="860" max-vertical-offset="1440">
-          <folding />
-        </state>
+        <state line="73" column="0" selection-start="2073" selection-end="2630" vertical-scroll-proportion="0.14482759" vertical-offset="860" max-vertical-offset="1440" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/mot/alipay/alipay.config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="19" selection-start="538" selection-end="541" vertical-scroll-proportion="0.22068965" vertical-offset="0" max-vertical-offset="580">
-          <folding />
-        </state>
+        <state line="25" column="19" selection-start="538" selection-end="541" vertical-scroll-proportion="0.22068965" vertical-offset="0" max-vertical-offset="580" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="408" selection-end="408" vertical-scroll-proportion="0.37024793" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="14" column="24" selection-start="408" selection-end="408" vertical-scroll-proportion="0.37024793" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="101" selection-start="1686" selection-end="1707" vertical-scroll-proportion="0.112874776" vertical-offset="384" max-vertical-offset="4208">
-          <folding />
-        </state>
+        <state line="47" column="101" selection-start="1686" selection-end="1707" vertical-scroll-proportion="0.112874776" vertical-offset="384" max-vertical-offset="4208" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/FirstController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="16" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.79012346" vertical-offset="528" max-vertical-offset="1536">
-          <folding>
-            <element signature="e#49#97#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="61" column="16" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.79012346" vertical-offset="528" max-vertical-offset="1536" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/logs/dev.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="26528">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="26528" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="359" selection-end="359" vertical-scroll-proportion="0.47603306" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="18" column="32" selection-start="359" selection-end="359" vertical-scroll-proportion="0.47603306" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/logs/prod.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Pay/finishAnsy.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Pay/finishNotify.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Payment/PaymentInterface.php">
@@ -762,34 +591,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mot/alipay/notify_url.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="519" selection-end="2038" vertical-scroll-proportion="0.1218716" vertical-offset="0" max-vertical-offset="1200" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mot/alipay/return_url.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="563" selection-end="1626" vertical-scroll-proportion="0.20892274" vertical-offset="0" max-vertical-offset="1024" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Util/RandomDataGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="0.06964091" vertical-offset="0" max-vertical-offset="919">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Entity/Purchase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="1" selection-start="226" selection-end="226" vertical-scroll-proportion="-0.6789989" vertical-offset="864" max-vertical-offset="5520">
+          <folding>
+            <element signature="e#44#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Entity/Alipay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.20892274" vertical-offset="192" max-vertical-offset="2080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="18" selection-start="1240" selection-end="1240" vertical-scroll-proportion="-9.12" vertical-offset="428" max-vertical-offset="1680">
-          <folding>
-            <element signature="e#49#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="5" selection-start="5516" selection-end="5516" vertical-scroll-proportion="-31.0" vertical-offset="2025" max-vertical-offset="3232">
-          <folding>
-            <element signature="e#45#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/return.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
+        <state line="38" column="43" selection-start="1149" selection-end="1168" vertical-scroll-proportion="-20.48" vertical-offset="0" max-vertical-offset="1584">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notify.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="5" selection-start="5322" selection-end="5322" vertical-scroll-proportion="0.2687704" vertical-offset="2281" max-vertical-offset="5072">
           <folding />
         </state>
       </provider>
