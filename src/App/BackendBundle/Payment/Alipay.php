@@ -284,10 +284,12 @@ class Alipay implements PaymentInterface
 
     /**
      * @param mixed $sync
+     * @return Alipay
      */
     public function setSync($sync)
     {
         $this->sync = $sync;
+        return $this;
     }
 
     /**
