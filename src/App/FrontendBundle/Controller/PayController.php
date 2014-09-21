@@ -93,7 +93,7 @@ class PayController extends CoreController
     public function finishAnsyAction(Request $request)
     {
         $payment = $this->get('alipay.payment');
-        $payment->finishPayment('return');
+        $payment->finishPayment('sync');
 
         return [];
     }

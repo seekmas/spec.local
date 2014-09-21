@@ -17,15 +17,10 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 class Alipay implements PaymentInterface
 {
     protected $entityManager;
-
     protected $purchaseEntity;
-
     protected $request;
-
     protected $container;
-
     protected $notify;
-
     protected $sync;
 
     /**
@@ -54,7 +49,6 @@ class Alipay implements PaymentInterface
         $purchase->setPrice($lesson->getPrice());
         $purchase->setStatusId(PurchaseStatus::Cart);
         $purchase->setCreatedAt(new \Datetime());
-
         $this->entityManager->persist($purchase);
         $this->entityManager->flush();
 
@@ -166,33 +160,29 @@ class Alipay implements PaymentInterface
 
     protected function notify()
     {
-
-        file_put_contents('../notify.txt' , json_encode($_REQUEST) , FILE_APPEND);
-        exit;
         $alipay_config = $this->payParams();
         $alipayNotify = new \AlipayNotify($alipay_config);
         $verify_result = $alipayNotify->verifyNotify();
 
         if($verify_result) {//验证成功
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            //请在这里加上商户的业务逻辑程序代
-
-
-            //——请根据您的业务逻辑来编写程序（以下代码仅作参考）——
-
-            //获取支付宝的通知返回参数，可参考技术文档中服务器异步通知参数列表
-
-            //商户订单号
 
         $out_trade_no = $_POST['out_trade_no'];
-
-            //支付宝交易号
-
+        //支付宝交易号
         $trade_no = $_POST['trade_no'];
-
-            //交易状态
+        //交易状态
         $trade_status = $_POST['trade_status'];
 
+        $order = $this->container->get('purchase.entity')->findOneBy(['tradeId' => $out_trade_no]);
+        if($order)
+        {
+            $this->entityManager->persist($order);
+            $order->setStatusId(PurchaseStatus::Paid);
+            $order->setIslocked(true);
+            $order->setStartAt(new \Datetime());
+            $order->setEndAt( new \Datetime(date("Y-m-d H:i:s" , strtotime("+3month"))) );
+
+            $this->entityManager->flush();
+        }
 
         if($_POST['trade_status'] == 'TRADE_FINISHED') {
             //判断该笔订单是否在商户网站中已经做过处理
@@ -236,8 +226,7 @@ class Alipay implements PaymentInterface
 
     protected function sync()
     {
-        file_put_contents('../sync.txt' , json_encode($_REQUEST) , FILE_APPEND);
-        exit;
+
         $alipay_config = $this->payParams();
         $alipayNotify = new \AlipayNotify($alipay_config);
         $verify_result = $alipayNotify->verifyReturn();

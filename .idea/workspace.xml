@@ -29,16 +29,34 @@
       <file leaf-file-name="PayController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1171" selection-end="1221" vertical-scroll-proportion="-21.12" vertical-offset="0" max-vertical-offset="1584">
+            <state line="84" column="0" selection-start="2377" selection-end="2377" vertical-scroll-proportion="-48.16" vertical-offset="44" max-vertical-offset="1584">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Alipay.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Alipay.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="0" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.6026936" vertical-offset="1175" max-vertical-offset="5104">
+            <state line="171" column="14" selection-start="5672" selection-end="5672" vertical-scroll-proportion="-5.92" vertical-offset="2492" max-vertical-offset="4928">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/First/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="40" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.47244096" vertical-offset="480" max-vertical-offset="1952">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Theme/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="4" selection-start="1577" selection-end="1577" vertical-scroll-proportion="-17.92" vertical-offset="0" max-vertical-offset="2560">
               <folding />
             </state>
           </provider>
@@ -68,7 +86,6 @@
         <option value="$PROJECT_DIR$/web/style/label.css" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Resources/views/Theme/layouts.html.twig" />
         <option value="$PROJECT_DIR$/web/style/patch.css" />
-        <option value="$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/First/index.html.twig" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/PurchaseStatus.php" />
         <option value="$PROJECT_DIR$/src/App/FrontendBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/App/FrontendBundle/Menu/MenuBuilder.php" />
@@ -86,7 +103,6 @@
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Form/ReplyType.php" />
         <option value="$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Pagination/KnpPagination.php" />
-        <option value="$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Theme/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/index.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/thread_content.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/thread.html.twig" />
@@ -102,17 +118,20 @@
         <option value="$PROJECT_DIR$/app/logs/dev.log" />
         <option value="$PROJECT_DIR$/app/logs/prod.log" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Payment/PaymentInterface.php" />
+        <option value="$PROJECT_DIR$/src/App/BackendBundle/Entity/Purchase.php" />
         <option value="$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php" />
         <option value="$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php" />
-        <option value="$PROJECT_DIR$/src/App/BackendBundle/Entity/Purchase.php" />
+        <option value="$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Theme/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/First/index.html.twig" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1365" />
-    <option name="width" value="1922" />
-    <option name="height" value="1081" />
+    <option name="x" value="265" />
+    <option name="y" value="92" />
+    <option name="width" value="1223" />
+    <option name="height" value="670" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -159,6 +178,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -208,26 +228,8 @@
               <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackendBundle" />
+              <option name="myItemId" value="FrontendBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,11 +251,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackendBundle" />
+              <option name="myItemId" value="FrontendBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Payment" />
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,17 +281,102 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackendBundle" />
+              <option name="myItemId" value="FrontendBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="First" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,11 +423,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1365" y="0" width="1922" height="1081" extended-state="6" />
+    <frame x="265" y="92" width="1223" height="670" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23996724" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -375,11 +466,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Form/CategoryType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="16" selection-start="908" selection-end="908" vertical-scroll-proportion="0.7414722" vertical-offset="179" max-vertical-offset="736" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Form/RequirementType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="16" selection-start="918" selection-end="918" vertical-scroll-proportion="0.7414722" vertical-offset="179" max-vertical-offset="736" />
@@ -418,11 +504,6 @@
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/index_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="8" selection-start="569" selection-end="569" vertical-scroll-proportion="0.5241379" vertical-offset="0" max-vertical-offset="848" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Theme/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="4" selection-start="5939" selection-end="5939" vertical-scroll-proportion="0.69655174" vertical-offset="1948" max-vertical-offset="2560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Forum/index.html.twig">
@@ -497,11 +578,6 @@
         <state line="22" column="23" selection-start="738" selection-end="738" vertical-scroll-proportion="0.6032316" vertical-offset="0" max-vertical-offset="557" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="4" selection-start="2037" selection-end="2050" vertical-scroll-proportion="0.5051546" vertical-offset="762" max-vertical-offset="1344" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="136" column="46" selection-start="4202" selection-end="4234" vertical-scroll-proportion="0.831283" vertical-offset="1703" max-vertical-offset="2272" />
@@ -540,11 +616,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="101" selection-start="1686" selection-end="1707" vertical-scroll-proportion="0.112874776" vertical-offset="384" max-vertical-offset="4208" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/FirstController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="16" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.79012346" vertical-offset="528" max-vertical-offset="1536" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/logs/dev.log">
@@ -603,44 +674,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Util/RandomDataGenerator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="0.06964091" vertical-offset="0" max-vertical-offset="919">
-          <folding />
-        </state>
+        <state line="4" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="0.06964091" vertical-offset="0" max-vertical-offset="919" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Entity/Alipay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.20892274" vertical-offset="192" max-vertical-offset="2080">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.20892274" vertical-offset="192" max-vertical-offset="2080" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notify.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1171" selection-end="1221" vertical-scroll-proportion="-21.12" vertical-offset="0" max-vertical-offset="1584">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Entity/Purchase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="19" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.47007617" vertical-offset="864" max-vertical-offset="5520">
           <folding>
-            <element signature="e#44#91#0" expanded="true" />
+            <element signature="e#44#91#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/FirstController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="16" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.77425045" vertical-offset="441" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="4" selection-start="1414" selection-end="1429" vertical-scroll-proportion="0.12727273" vertical-offset="691" max-vertical-offset="1344">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bracket/css/style.default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="1" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.36363637" vertical-offset="660" max-vertical-offset="61888">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/Theme/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="4" selection-start="1577" selection-end="1577" vertical-scroll-proportion="-17.92" vertical-offset="0" max-vertical-offset="2560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Controller/PayController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="0" selection-start="2377" selection-end="2377" vertical-scroll-proportion="-48.16" vertical-offset="44" max-vertical-offset="1584">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/BackendBundle/Payment/Alipay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.6026936" vertical-offset="1175" max-vertical-offset="5104">
+        <state line="171" column="14" selection-start="5672" selection-end="5672" vertical-scroll-proportion="-5.92" vertical-offset="2492" max-vertical-offset="4928">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/FrontendBundle/Resources/views/First/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="40" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.47244096" vertical-offset="480" max-vertical-offset="1952">
           <folding />
         </state>
       </provider>
