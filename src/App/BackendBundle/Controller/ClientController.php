@@ -22,4 +22,15 @@ class ClientController extends CoreController
 
         return ['users'=>$users ];
     }
+
+    /**
+     * @Route("/orders" , name="orders_manage")
+     * @Template()
+     */
+    public function orderAction(Request $request , $userId = null)
+    {
+        $orders = $this->get('purchase.paginator')->setPerpage(30)->getPagination();
+
+        return ['orders'=>$orders ];
+    }
 }

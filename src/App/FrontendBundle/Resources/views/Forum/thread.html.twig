@@ -2,12 +2,16 @@
 
 {% block moduleName %}社区{% endblock %}
 
+
+
 {% block body %}
     <div class="contentpanel panel-email">
 
         <div class="row">
             <div class="col-sm-3 col-lg-2">
-                <button class="btn btn-danger btn-block btn-compose-email">发帖子</button>
+                {% block leftLink %}
+                    <a class="btn btn-danger btn-block btn-compose-email" href="{{ url('forum') }}#create_new_posts">发帖子</a>
+                {% endblock %}
                 <ul class="nav nav-pills nav-stacked nav-email">
                     <li>
                         <a href="{{ url('forum') }}">
@@ -21,21 +25,13 @@
 
                 <div class="panel panel-default">
                     <div class="panel-body">
-
                     {% if wasNotExist is defined %}
-
                         帖子不存在
-
                     {% elseif thread.removedAt != null  %}
-
-
                         帖子已经被删除
-
-
                     {% else %}
                         {% include "AppFrontendBundle:Forum:thread_content.html.twig" %}
                     {% endif %}
-
                     </div><!-- panel-body -->
                 </div><!-- panel -->
 

@@ -77,3 +77,7 @@ services:
     reply.paginator:
         class: App\BackendBundle\Pagination\KnpPagination
         arguments: [ @knp_paginator , @reply.entity , @request_stack ]
+
+    purchase.paginator:
+        class: App\BackendBundle\Pagination\KnpPagination
+        arguments: [ @knp_paginator , @purchase.entity , @request_stack ]

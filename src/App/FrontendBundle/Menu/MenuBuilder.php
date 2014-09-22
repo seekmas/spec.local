@@ -16,13 +16,13 @@ class MenuBuilder extends ContainerAware
 
         $menu->addChild('lesson',['attributes' =>['icon'=>'fa fa-home'],'label' => '课程','route' => 'home_page']);
 
-        $menu->addChild('training',['attributes' =>['icon'=>'fa fa-home'],'label' => '培训','route' => '']);
+//        $menu->addChild('training',['attributes' =>['icon'=>'fa fa-home'],'label' => '培训','route' => '']);
 
         $menu->addChild('forum',['attributes' =>['icon'=>'fa fa-home'],'label' => '社区','route' => 'forum']);
 
-        $menu->addChild('arrangement',['attributes' =>['icon'=>'fa fa-home'],'label' => '活动','route' => 'home_calender']);
-
-        $menu->addChild('consulting',['attributes' =>['icon'=>'fa fa-home'],'label' => '顾问咨询','route' => '']);
+//        $menu->addChild('arrangement',['attributes' =>['icon'=>'fa fa-home'],'label' => '活动','route' => 'home_calender']);
+//
+//        $menu->addChild('consulting',['attributes' =>['icon'=>'fa fa-home'],'label' => '顾问咨询','route' => '']);
 
         return $menu;
     }

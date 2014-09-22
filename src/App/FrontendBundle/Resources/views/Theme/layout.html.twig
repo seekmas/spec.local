@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-    <title>{% block title %}Cloud Academy{% endblock %}</title>
+    <title>{% block title %}精益云学院{% endblock %}</title>
     {% block stylesheets %}
     <link href="{{ asset('bracket/css/style.default.css') }}" rel="stylesheet">
     <link href="{{ asset('video-js/video-js.css') }}" rel="stylesheet">
@@ -61,7 +61,10 @@
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
                             <li><a href="{{ url('user_home') }}"><i class="glyphicon glyphicon-user"></i> 个人信息 / 隐私</a></li>
                             <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 支付</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i> 帮助</a></li>
+
+                            {% if is_granted('ROLE_ADMIN') %}
+                            <li><a href="{{ url('dashboard') }}"><i class="glyphicon glyphicon-question-sign"></i> 管理</a></li>
+                            {% endif %}
                             <li><a href="{{ url('fos_user_security_logout') }}"><i class="glyphicon glyphicon-log-out"></i> 注销</a></li>
                         </ul>
                     </div>
@@ -88,15 +91,6 @@
     </div>
 
     <div class="contentpanel">
-
-        {% for type, messages in app.session.flashbag.all() %}
-            {% for message in messages %}
-                <div class="alert alert-{{ type }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endfor %}
-
 
         <div class="row">
             {% block body %}{% endblock %}
@@ -144,6 +138,29 @@
                     }
             );
         });
+    </script>
+    <script src="{{ asset('bootbox/bootbox.js') }}"></script>
+    {% for type, messages in app.session.flashbag.all() %}
+    <script>
+        {% for message in messages %}
+        bootbox.dialog({
+            message: "{{ message }}",
+            title: "提醒",
+            buttons: {
+                success: {
+                    label: "确定",
+                    className: "btn-success",
+                    callback: function() {
+
+                    }
+                }
+            }
+        });
+        {% endfor %}
+    </script>
+    {% endfor %}
+    <script>
+
     </script>
 
 {% endblock %}

@@ -94,10 +94,14 @@ liip_imagine:
 
     filter_sets:
         cache: ~
-        avatar:
+        avatarTiny:
             quality: 100
             filters:
-                thumbnail: { size: [35,35], mode: outbound }
+                thumbnail: { size: [75,75], mode: outbound }
+        avatarBig:
+            quality: 100
+            filters:
+                thumbnail: { size: [150,150], mode: outbound }
         tiny:
             quality: 100
             filters:

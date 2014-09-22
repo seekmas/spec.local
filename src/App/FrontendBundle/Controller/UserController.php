@@ -34,10 +34,12 @@ class UserController extends CoreController
         if( $form->isValid())
         {
             $this->processForm($form,$privates,$tmpPhoto);
-
+            $this->flash('success' , '资料更新成功');
+            return $this->to('user_home');
         }
+        $this->resetEntity($privates,$tmpPhoto);
 
 
-        return ['form'=>$form->createView()];
+        return ['form'=>$form->createView(),'privates'=>$privates];
     }
 }

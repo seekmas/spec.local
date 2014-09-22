@@ -45,7 +45,7 @@
 
                       <input type="{{ type }}" {{ block('widget_attributes') }} />
                     </span>
-                <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+                <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">清除</a>
             </div>
         </div>
 
@@ -88,7 +88,7 @@
             {{ label|trans({}, translation_domain) }}
 
             {% if required -%}
-                {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %} <strong>( Required )</strong>
+                {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %} <strong>( 必填 )</strong>
             {%- endif %}
 
         </label>

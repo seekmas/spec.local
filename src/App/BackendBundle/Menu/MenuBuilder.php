@@ -20,6 +20,8 @@ class MenuBuilder extends ContainerAware
 
         $menu->addChild('client',['attributes' =>['icon'=>'fa fa-home'],'label' => '客户','route' => '']);
         $menu['client']->addChild('user_manage',['attributes' =>['icon'=>'fa fa-home'],'label' => '用户管理','route' => 'user_manage']);
+        $menu['client']->addChild('orders_manage',['attributes' =>['icon'=>'fa fa-home'],'label' => '订单管理','route' => 'orders_manage']);
+
 
         return $menu;
     }

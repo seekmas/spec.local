@@ -15,10 +15,11 @@ class ThreadType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('subject')
-            ->add('content')
+            ->add('subject' , null , ['label' => '帖子标题'])
+            ->add('content' , null , ['label' => '帖子内容'])
         ;
-        $builder->add('submit','submit');
+
+        $builder->add('submit','submit' , ['label'=>'发布']);
     }
     
     /**
