@@ -39,7 +39,7 @@
         {% for key,reply in replies %}
         <div class="media act-media">
             <a class="pull-left" href="#">
-                <img class="media-object" src="{{ asset(reply.user.privates.photo) | imagine_filter('avatar') }}" alt="">
+                <img class="media-object" src="{{ asset(reply.user.privates.photo) | imagine_filter('avatarTiny') }}" alt="">
             </a>
 
             <div class="pull-right"><small class="text-muted">{{ time_diff(reply.createdAt) }}</small></div>
