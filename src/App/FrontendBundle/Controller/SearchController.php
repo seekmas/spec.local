@@ -14,7 +14,7 @@ class SearchController extends CoreController
      */
     public function indexAction()
     {
-        
+
 
         return array(
 

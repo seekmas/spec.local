@@ -17,3 +17,7 @@ forum_home:
 frist_arrangement:
     resource: "@AppFrontendBundle/Controller/CalenderController.php"
     type:     annotation
+
+frist_email:
+    resource: "@AppFrontendBundle/Controller/EmailController.php"
+    type:     annotation
