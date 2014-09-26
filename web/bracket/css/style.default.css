@@ -3454,7 +3454,7 @@ div.error label.error:before {
    }
    
    .leftpanel-show .mainpanel {
-      margin-left: 240px;
+      margin-left: 180px;
    }
    
    .stickyheader .headerbar {
@@ -3466,7 +3466,7 @@ div.error label.error:before {
    }
    
    .stickyheader.chat-relative-view .headerbar {
-      right: 240px;
+      right: 180px;
       left: auto;
    }
    
