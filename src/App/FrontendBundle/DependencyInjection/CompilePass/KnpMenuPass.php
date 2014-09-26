@@ -22,5 +22,4 @@ class KnpMenuPass implements CompilerPassInterface
             $container->setParameter('knp_menu.renderer.twig.template' , 'AppFrontendBundle:Theme:knp_menu.html.twig');
         }
     }
-
 }

@@ -17,7 +17,12 @@
 
     <div class="media">
         <a href="#" class="pull-left">
+
+            {% if thread.user.privates %}
             <img alt="" src="{{ asset(thread.user.privates.photo) }}" class="media-object">
+            {% else %}
+            <img class="media-object" src="{{ asset('photo.png') }}" />
+            {% endif %}
         </a>
         <div class="media-body">
             <span class="media-meta pull-right">{{ time_diff(thread.createdAt) }}</span>
@@ -27,19 +32,21 @@
     </div><!-- media -->
 
     <h4 class="email-subject">{{ thread.subject }}</h4>
-
         {{ thread.content | raw }}
-
     <br>
     <hr/>
-
 
     <div class="activity-list">
 
         {% for key,reply in replies %}
         <div class="media act-media">
             <a class="pull-left" href="#">
+
+                {% if reply.user.privates %}
                 <img class="media-object" src="{{ asset(reply.user.privates.photo) | imagine_filter('avatarTiny') }}" alt="">
+                {% else %}
+                <img class="media-object" src="{{ asset('photo.png') }}" />
+                {% endif %}
             </a>
 
             <div class="pull-right"><small class="text-muted">{{ time_diff(reply.createdAt) }}</small></div>
@@ -76,7 +83,13 @@
     <div class="media">
 
         <a href="#" class="pull-left">
-            <img alt="" src="{{ asset(app.user.privates.photo) }}" class="media-object">
+
+            {% if thread.user.privates %}
+                <img alt="" src="{{ asset(thread.user.privates.photo) }}" class="media-object">
+            {% else %}
+                <img class="media-object" src="{{ asset('photo.png') }}" />
+            {% endif %}
+
         </a>
         <div id="create_new_reply" class="media-body">
 

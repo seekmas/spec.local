@@ -20,7 +20,17 @@
     <td>
         <div class="media">
             <a href="#" class="pull-left">
-                <img src="{{ thread.user.privates.photo | imagine_filter('avatarTiny') }}" class="media-object">
+
+                {% if thread.user.privates %}
+
+                    <img src="{{ thread.user.privates.photo | imagine_filter('avatarTiny') }}" class="media-object">
+
+                {% else %}
+
+                    <img src="{{ asset('photo.png') }}" class="media-object">
+
+                {% endif %}
+
             </a>
             <div class="media-body">
 

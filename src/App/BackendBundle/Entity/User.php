@@ -19,6 +19,31 @@ class User extends BaseUser
     protected $id;
 
     /**
+     * @ORM\Column(name="name" , type="string" , length=255 , nullable=true)
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(name="job" , type="string" , length=255 , nullable=true)
+     */
+    protected $job;
+
+    /**
+     * @ORM\Column(name="company" , type="string" , length=255 , nullable=true)
+     */
+    protected $company;
+
+    /**
+     * @ORM\Column(name="phone" , type="bigint" , nullable=true)
+     */
+    protected $phone;
+
+    /**
+     * @ORM\Column(name="vocation" , type="string" , length=255 , nullable=true)
+     */
+    protected $vocation;
+
+    /**
      * @ORM\OneToOne(targetEntity="Privates" , mappedBy="user")
      */
     protected $privates;

@@ -2,6 +2,10 @@ parameters:
 
 
 services:
+    #Encoder
+    security.core.md5_encoder:
+        class: App\BackendBundle\Security\Encoder\Md5Encoder
+        arguments: [6]
     #Twig
     twig.extension.text:
        class: Twig_Extensions_Extension_Text

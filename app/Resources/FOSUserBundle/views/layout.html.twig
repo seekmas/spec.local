@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="精益云学院,精益管理课程,精益视频,精益培训,精益服务">
+    <meta name="description" content="精益云学院是一家专注全系统精益管理方面的垂直网站，一站式精益学习服务平台。精益云学院提供全方位的精益服务，从视频课程，公开课，企业内训，到精益工具等内容。">
+    <meta name="author" content="">
+
+    <title>精益云学院  - 一站式精益学习服务平台</title>
+
+    <!-- css -->
+    <link href="{{ asset('home/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('home/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('home/css/nivo-lightbox.css') }}" rel="stylesheet" />
+    <link href="{{ asset('home/css/nivo-lightbox-theme/default/default.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('home/css/owl.carousel.css') }}" rel="stylesheet" media="screen" />
+    <link href="{{ asset('home/css/owl.theme.css') }}" rel="stylesheet" media="screen" />
+    <link href="{{ asset('home/css/flexslider.css') }}" rel="stylesheet" />
+    <link href="{{ asset('home/css/animate.css') }}" rel="stylesheet" />
+    <link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('home/color/default.css') }}" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+
+<!-- Navigation -->
+<div id="navigation">
+    <nav class="navbar navbar-custom" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="site-logo">
+                        <a href="index.html" class="brand"><img src="{{ asset('home/img/logo.jpg') }}"></a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-10">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="{{ url('anonymous') }}">首页</a></li>
+                            <li><a href="{{ url('anonymous') }}#about">关于我们</a></li>
+                            <li><a href="{{ url('anonymous') }}#service">产品服务</a></li>
+                            <li><a href="{{ url('anonymous') }}#works">精益课程</a></li>
+                            <li><a href="{{ url('anonymous') }}#contact">联系我们</a></li>
+                            <li><a href="{{ url('fos_user_security_login') }}">登陆</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.Navbar-collapse -->
+
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+</div>
+<!-- /Navigation -->
+
+<!-- Section: about -->
+<section id="user" class="color-dark bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="panel"><div class="panel-body">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
+                {% else %}
+
+                {% endif %}
+
+
+                {% for type, messages in app.session.flashbag.all() %}
+                    {% for message in messages %}
+                        <div class="flash-{{ type }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+
+                <div>
+                    {% block fos_user_content %}
+                    {% endblock fos_user_content %}
+                </div>
+                </div></div>
+            </div>
+
+            <div class="col-md-4"></div>
+
+        </div>
+    </div>
+</section>
+<!-- /Section: about -->
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <div class="text-center">
+                    <a href="#intro" class="totop"><i class="fa fa-angle-up fa-3x"></i></a>
+
+                    <p>网站内容解释权归精益云学院所有<br />
+                        &copy;Copyright 2013-2014 <a href="#">精益云学院</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Core JavaScript Files -->
+<script src="{{ asset('home/js/jquery.min.js') }}"></script>
+<script src="{{ asset('home/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('home/js/jquery.sticky.js') }}"></script>
+<script src="{{ asset('home/js/jquery.flexslider-min.js') }}"></script>
+<script src="{{ asset('home/js/jquery.easing.min.js') }}"></script>
+<script src="{{ asset('home/js/jquery.scrollTo.js') }}"></script>
+<script src="{{ asset('home/js/jquery.appear.js') }}"></script>
+<script src="{{ asset('home/js/stellar.js') }}"></script>
+<script src="{{ asset('home/js/wow.min.js') }}"></script>
+<script src="{{ asset('home/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('home/js/nivo-lightbox.min.js') }}"></script>
+
+<script src="{{ asset('home/js/custom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('home/http://tajs.qq.com/stats?sId=28821709') }}" charset="UTF-8"></script>
+</body>
+
+</html>
+
+
+
