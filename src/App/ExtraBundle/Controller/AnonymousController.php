@@ -15,6 +15,11 @@ class AnonymousController extends CoreController
      */
     public function indexAction(Request $request)
     {
+        if($this->get('security.context')->isGranted('ROLE_USER'))
+        {
+            return $this->redirect($this->generateUrl('home_page'));
+        }
+
         return [];
     }
 }
