@@ -58,8 +58,6 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
                             <li><a href="{{ url('user_home') }}"><i class="glyphicon glyphicon-user"></i> 个人信息 / 隐私</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 支付</a></li>
-
                             {% if is_granted('ROLE_ADMIN') %}
                             <li><a href="{{ url('dashboard') }}"><i class="glyphicon glyphicon-question-sign"></i> 管理</a></li>
                             {% endif %}
@@ -101,7 +99,7 @@
 
 
     <div class="rightpanel">
-        {% include "AppFrontendBundle:Theme:right.html.twig" %}
+        {% if false %}{% include "AppFrontendBundle:Theme:right.html.twig" %}{% endif %}
     </div>
 
 

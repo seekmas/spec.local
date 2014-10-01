@@ -29,6 +29,11 @@ class Lesson extends Photo
     protected $price;
 
     /**
+     * @ORM\Column(name="free" , type="boolean" , nullable=true)
+     */
+    protected $free;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
@@ -91,6 +96,22 @@ class Lesson extends Photo
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * @param mixed $free
+     */
+    public function setFree($free)
+    {
+        $this->free = $free;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFree()
+    {
+        return $this->free;
     }
 
     /**

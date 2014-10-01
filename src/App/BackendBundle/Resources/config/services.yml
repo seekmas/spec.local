@@ -73,6 +73,13 @@ services:
         factory_service: doctrine
         factory_method: getRepository
         arguments: [ App\BackendBundle\Entity\Alipay ]
+
+    checkin.entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ App\BackendBundle\Entity\Checkin ]
+
     #pagination
     thread.paginator:
         class: App\BackendBundle\Pagination\KnpPagination

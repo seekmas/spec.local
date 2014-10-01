@@ -2,7 +2,21 @@
 
 {% block moduleName %}社区{% endblock %}
 
+{% block navigation %}
 
+    <li><a href="{{ url('forum') }}">社区</a></li>
+
+    {% if wasNotExist is defined %}
+        帖子不存在
+    {% elseif thread.removedAt != null  %}
+        帖子已经被删除
+    {% else %}
+        <li><a href="{{ url('thread' , {'id':thread.id}) }}">{{ thread.subject }}</a></li>
+    {% endif %}
+
+
+
+{% endblock %}
 
 {% block body %}
     <div class="contentpanel panel-email">

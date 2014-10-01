@@ -48,6 +48,11 @@ class User extends BaseUser
      */
     protected $privates;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Checkin" , mappedBy="user")
+     */
+    protected $checkin;
+
     public function __construct()
     {
         parent::__construct();
@@ -68,5 +73,21 @@ class User extends BaseUser
     public function getPrivates()
     {
         return $this->privates;
+    }
+
+    /**
+     * @param mixed $checkin
+     */
+    public function setCheckin($checkin)
+    {
+        $this->checkin = $checkin;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCheckin()
+    {
+        return $this->checkin;
     }
 }

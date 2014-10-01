@@ -38,12 +38,10 @@
                             {% else %}
                                 {{ form(form) }}
                             {% endif %}
-
-
                         </div>
 
                         <div id="post-checkin" class="tab-pane">
-                            <input class="form-control" placeholder="Search location" type="text">
+                            <a class="btn btn-block btn-success" href="{{ url('check_in') }}">签到</a>
                         </div>
 
                     </div><!-- tab-content -->
@@ -58,37 +56,27 @@
             <div class="panel panel-default panel-alt widget-messaging">
                 <div class="panel-heading">
                     <div class="panel-btns">
-                        <a href="#" class="panel-edit"><i class="fa fa-edit"></i></a>
+
                     </div><!-- panel-btns -->
-                    <h3 class="panel-title">消息</h3>
+                    <h3 class="panel-title">购物车</h3>
                 </div>
                 <div class="panel-body">
                     <ul>
+                        {% for order in purchases %}
                         <li>
-                            <small class="pull-right">Dec 10</small>
-                            <h4 class="sender">Jennier Lawrence</h4>
-                            <small>Lorem ipsum dolor sit amet...</small>
+                            <small class="pull-right">{{ time_diff( order.createdAt ) }}</small>
+                            <h4 class="sender"><a href="{{ url('home_lesson' , {'id':order.lesson.id}) }}">{{ order.lesson.name }}</a></h4>
+                            <br/>
+                            <p>购买状态 : {{ order.isLocked | is_done | raw }} {% if order.isLocked == 0 %}<a href="{{ url('payment' , {'lessonId':order.lesson.id}) }}">立即购买</a>{% endif %}</p>
+
+                            订单号: {{ order.tradeId }}
+
+                            {% if order.isLocked %}
+                                <br/>开始: {{ order.startAt | date('Y-m-d') }}
+                                <br/>到期: {{ order.endAt | date('Y-m-d') }}
+                            {% endif %}
                         </li>
-                        <li>
-                            <small class="pull-right">Dec 9</small>
-                            <h4 class="sender">Marsha Mellow</h4>
-                            <small>Lorem ipsum dolor sit amet...</small>
-                        </li>
-                        <li>
-                            <small class="pull-right">Dec 9</small>
-                            <h4 class="sender">Holly Golightly</h4>
-                            <small>Lorem ipsum dolor sit amet...</small>
-                        </li>
-                        <li>
-                            <small class="pull-right">Dec 10</small>
-                            <h4 class="sender">Jennier Lawrence</h4>
-                            <small>Lorem ipsum dolor sit amet...</small>
-                        </li>
-                        <li>
-                            <small class="pull-right">Dec 9</small>
-                            <h4 class="sender">Marsha Mellow</h4>
-                            <small>Lorem ipsum dolor sit amet...</small>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div><!-- panel-body -->
             </div><!-- panel -->

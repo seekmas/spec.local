@@ -20,7 +20,7 @@
                     <img src="{{ asset(lesson.photo) | imagine_filter('lessonPreview') }}" class="img-responsive" style="width: 100%" alt="">
                 </figure>
 
-            <h4><a href="{{ url('home_lesson' , {'id' : lesson.id}) }}">{{ lesson.id }} . {{ lesson.name }}</a></h4>
+            <h4><a href="{{ url('home_lesson' , {'id' : lesson.id}) }}">{{ lesson.id }} . {{ lesson.name }}</a> {% if lesson.free %}<span class="label label-success">当前免费课程</span>{% endif %}</h4>
         </div><!-- thmb -->
     </div><!-- col-xs-6 -->
     {% endfor %}
