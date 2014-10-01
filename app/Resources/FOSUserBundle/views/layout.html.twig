@@ -1,85 +1,35 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="精益云学院,精益管理课程,精益视频,精益培训,精益服务">
-    <meta name="description" content="精益云学院是一家专注全系统精益管理方面的垂直网站，一站式精益学习服务平台。精益云学院提供全方位的精益服务，从视频课程，公开课，企业内训，到精益工具等内容。">
-    <meta name="author" content="">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 
-    <title>精益云学院  - 一站式精益学习服务平台</title>
+    <title>精益云学院 - 一站式精益学习服务开放平台</title>
 
-    <!-- css -->
-    <link href="{{ asset('home/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('home/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('home/css/nivo-lightbox.css') }}" rel="stylesheet" />
-    <link href="{{ asset('home/css/nivo-lightbox-theme/default/default.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('home/css/owl.carousel.css') }}" rel="stylesheet" media="screen" />
-    <link href="{{ asset('home/css/owl.theme.css') }}" rel="stylesheet" media="screen" />
-    <link href="{{ asset('home/css/flexslider.css') }}" rel="stylesheet" />
-    <link href="{{ asset('home/css/animate.css') }}" rel="stylesheet" />
-    <link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('home/color/default.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('super/assets/images/yun.ico') }}">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Bootstrap itself -->
+    <link href="{{ asset('super/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link href="{{ asset('super/assets/css/font-awesome.css') }}" rel="stylesheet">
 
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{{ asset('super/assets/css/styles.css') }}">
 
+    <!--[if lt IE 9]> <script src="{{ asset('super/assets/js/html5shiv.js') }}"></script> <![endif]-->
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<body>
 
-
-<!-- Navigation -->
-<div id="navigation">
-    <nav class="navbar navbar-custom" role="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="site-logo">
-                        <a href="index.html" class="brand"><img src="{{ asset('home/img/logo.jpg') }}"></a>
-                    </div>
-                </div>
-
-
-                <div class="col-md-10">
-
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="menu">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="{{ url('anonymous') }}">首页</a></li>
-                            <li><a href="{{ url('anonymous') }}#about">关于我们</a></li>
-                            <li><a href="{{ url('anonymous') }}#service">产品服务</a></li>
-                            <li><a href="{{ url('anonymous') }}#works">精益课程</a></li>
-                            <li><a href="{{ url('anonymous') }}#contact">联系我们</a></li>
-                            <li><a href="{{ url('fos_user_security_login') }}">登陆</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.Navbar-collapse -->
-
-                </div>
-            </div>
-        </div>
-        <!-- /.container -->
-    </nav>
-</div>
-<!-- /Navigation -->
-
-<!-- Section: about -->
-<section id="user" class="color-dark bg-white">
+<!-- Header -->
+<header class="header">
     <div class="container">
         <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <div class="panel"><div class="panel-body">
+            <div class="col-lg-8 col-lg-push-2 text-center">
+                <img src="{{ asset('super/assets/images/logo.png') }}" style="margin-top:20px;">
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                     {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
                     <a href="{{ path('fos_user_security_logout') }}">
@@ -88,7 +38,6 @@
                 {% else %}
 
                 {% endif %}
-
 
                 {% for type, messages in app.session.flashbag.all() %}
                     {% for message in messages %}
@@ -102,51 +51,79 @@
                     {% block fos_user_content %}
                     {% endblock fos_user_content %}
                 </div>
-                </div></div>
+
             </div>
-
-            <div class="col-md-4"></div>
-
         </div>
+
     </div>
-</section>
-<!-- /Section: about -->
+</header>
+<!-- /Header -->
 
-
-
-<footer>
-    <div class="container">
+<footer id="footer" class="jumbotron">
+    <section class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-
-                <div class="text-center">
-                    <a href="#intro" class="totop"><i class="fa fa-angle-up fa-3x"></i></a>
-
-                    <p>网站内容解释权归精益云学院所有<br />
-                        &copy;Copyright 2013-2014 <a href="#">精益云学院</a></p>
+            <div class="col-md-5 col-md-push-1">
+                <h2>用行动支持我们的产品</h2>
+                <p>请分享给你的朋友和同事，让更多学员加入精益云学院。</p>
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                    <a class="addthis_button_facebook"></a>
+                    <a class="addthis_button_twitter"></a>
+                    <a class="addthis_button_linkedin"></a>
+                    <a class="addthis_button_google_plusone_share"></a>
+                    <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
                 </div>
+                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                <script type="text/javascript" src="{{ asset('super/assets/js/addthis_widget.js') }}"></script>
+                <!-- AddThis Button END -->
+
+            </div>
+            <div class="col-md-5 col-md-push-1">
+                <h2>需要帮助和支持？</h2>
+                <p>对我们有任何疑问，可以加入官方的QQ社群:83121455
+                </p>
+                <p>也可以发送邮件到 <a href="{{ asset('super/mailto:kefu@jingyiguanli.com') }}">kefu@jingyiguanli.com</a> 与我们联系。 </p>
+
             </div>
         </div>
-    </div>
+    </section>
 </footer>
 
-<!-- Core JavaScript Files -->
-<script src="{{ asset('home/js/jquery.min.js') }}"></script>
-<script src="{{ asset('home/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('home/js/jquery.sticky.js') }}"></script>
-<script src="{{ asset('home/js/jquery.flexslider-min.js') }}"></script>
-<script src="{{ asset('home/js/jquery.easing.min.js') }}"></script>
-<script src="{{ asset('home/js/jquery.scrollTo.js') }}"></script>
-<script src="{{ asset('home/js/jquery.appear.js') }}"></script>
-<script src="{{ asset('home/js/stellar.js') }}"></script>
-<script src="{{ asset('home/js/wow.min.js') }}"></script>
-<script src="{{ asset('home/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('home/js/nivo-lightbox.min.js') }}"></script>
+<p class="small text-muted text-center">Copyright &copy; 2012-2014.<a href="{{ asset('super/http://gettemplate.com/') }}" rel="designer" title="Free Bootstrap templates">精益云学院</a></p>
+<br>
 
-<script src="{{ asset('home/js/custom.js') }}"></script>
-<script type="text/javascript" src="{{ asset('home/http://tajs.qq.com/stats?sId=28821709') }}" charset="UTF-8"></script>
+
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="{{ asset('super/assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('super/assets/js/template.js') }}"></script>
+<script src="{{ asset('super/assets/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript">
+    $('#myModal').modal(options)
+</script>
+
+<style type="text/css">
+    .modal-font{
+        color: #000;
+    }
+    .modal-content{
+        background: #006699 ;
+        background: -moz-linear-gradient(top,  #006699  0%, #0066CC  100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#006699 ), color-stop(100%,#0066CC ));
+        background: -webkit-linear-gradient(top,  #006699  0%,#0066CC  100%);
+        background: -o-linear-gradient(top,  #006699  0%,#0066CC  100%);
+        background: -ms-linear-gradient(top,  #006699  0%,#0066CC  100%);
+        background: linear-gradient(to bottom,  #006699  0%,#0066CC  100%);
+    }
+    .modal-header{
+        border-bottom: none;
+    }
+    .modal-footer{
+        border-top: none;
+        text-align: center;
+    }
+</style>
 </body>
-
 </html>
 
 
