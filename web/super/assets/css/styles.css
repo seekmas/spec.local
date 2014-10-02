@@ -179,15 +179,15 @@ a:visited { color: #D87563; }
 }
 
 
-a {
-    color: #fff;
+a.register_link {
+    color: #ffffff;
 }
 
-a:hover {
-    color: #fff;
+a:hover.register_link {
+    color: #ffffff;
     text-decoration: none;
 }
 
-a:visited {
-    color: #fff;
+.register_link a:visited {
+    color: #ffffff;
 }
