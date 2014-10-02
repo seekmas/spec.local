@@ -33,7 +33,7 @@
 
         {% if lesson.free %}
 
-        <a class="btn btn-success mr5" href="#><i class="fa fa-user"></i> 本课程限时免费</a>
+        <a class="btn btn-success mr5" href="#"><i class="fa fa-user"></i> 本课程限时免费</a>
        {% else %}
         <a class="btn btn-success mr5" href="{{ url('payment' , {'lessonId':lesson.id}) }}"><i class="fa fa-user"></i> 购买课程</a>
         {% endif %}
@@ -43,9 +43,7 @@
 
         <a class="btn btn-primary" href="{{ url('home_lesson' , {'id':lesson.id}) }}"><i class="fa fa-envelope-o"></i> 返回课程列表</a>
     </div>
-
 </div>
-
 
 <div class="col-sm-3">
     <div class="panel"><div class="panel-body">
