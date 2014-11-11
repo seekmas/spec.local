@@ -18,7 +18,7 @@ class ClientController extends CoreController
      */
     public function indexAction(Request $request , $userId = null)
     {
-        $users = $this->get('user.entity')->findAll();
+        $users = $this->get('user.paginator')->getPagination();
 
         return ['users'=>$users ];
     }

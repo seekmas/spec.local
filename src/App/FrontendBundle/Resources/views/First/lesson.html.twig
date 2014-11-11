@@ -49,7 +49,7 @@
     <div class="panel"><div class="panel-body">
     <h3>课程介绍</h3>
 
-    <img src="{{ asset(lesson.photo) | imagine_filter('lessonPreview') }}" width="100%" />
+    <img src="{{ asset(lesson.photo)}}" width="100%" />
 
     <div class="mb30"></div>
 
@@ -101,7 +101,7 @@
         {% for key , chapter in lesson.chapter %}
         <div class="media act-media">
             <a class="pull-left" href="#">
-                <img class="media-object act-thumb" src="{{ asset(chapter.photo) | imagine_filter('chapter') }}" alt="">
+                <img class="media-object act-thumb" src="{{ asset(chapter.photo) }}" alt="">
             </a>
             <div class="media-body act-media-body">
                 <h3><a class="style" href="{{ url('home_lesson',{'id':lesson.id,'chapterId':chapter.id}) }}">{{ key+1 }}. {{ chapter.name }}</a></h3><br>

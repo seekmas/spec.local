@@ -119,4 +119,12 @@ class FirstController extends CoreController
         $categories = $this->get('category.entity')->findAll();
         return ['form'=>$form->createView(),'categories'=>$categories];
     }
+
+    /**
+     *
+     */
+    public function dropAction(Request $request , $id)
+    {
+
+    }
 }

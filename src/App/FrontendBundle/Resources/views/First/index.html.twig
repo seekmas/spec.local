@@ -17,7 +17,7 @@
         <div class="thmb">
 
                 <figure class="label top fade" data-label="{{ lesson.category }} : {{ lesson.name }}" style="width: 100%">
-                    <img src="{{ asset(lesson.photo) | imagine_filter('lessonPreview') }}" class="img-responsive" style="width: 100%" alt="">
+                    <img src="{{ asset(lesson.photo) }}" class="img-responsive" style="width: 100%" alt="">
                 </figure>
 
             <h4><a href="{{ url('home_lesson' , {'id' : lesson.id}) }}">{{ lesson.id }} . {{ lesson.name }}</a> {% if lesson.free %}<span class="label label-success">当前免费课程</span>{% endif %}</h4>

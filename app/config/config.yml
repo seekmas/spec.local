@@ -90,41 +90,41 @@ knp_menu:
     templating: false # if true, enables the helper for PHP templates
     default_renderer: twig # The renderer to use, list is also available by default
 
-liip_imagine:
-    resolvers:
-       default:
-          web_path: ~
-
-    filter_sets:
-        cache: ~
-        avatarTiny:
-            quality: 100
-            filters:
-                thumbnail: { size: [75,75], mode: outbound }
-        avatarBig:
-            quality: 100
-            filters:
-                thumbnail: { size: [150,150], mode: outbound }
-        tiny:
-            quality: 100
-            filters:
-                thumbnail: { size: [50,50], mode: outbound }
-        lessonPreview:
-            quality: 100
-            filters:
-                thumbnail: { size: [267,178], mode: outbound }
-        chapter:
-            quality: 100
-            filters:
-                thumbnail: { size: [120,90], mode: outbound }
-        uploadPreview:
-           quality: 100
-           filters:
-                thumbnail: { size: [120,92], mode: outbound }
-        lessonTiny:
-            quality: 100
-            filters:
-                thumbnail: { size: [100,100], mode: outbound }
+#liip_imagine:
+#    resolvers:
+#       default:
+#          web_path: ~
+#
+#    filter_sets:
+#        cache: ~
+#        avatarTiny:
+#            quality: 100
+#            filters:
+#                thumbnail: { size: [75,75], mode: outbound }
+#        avatarBig:
+#            quality: 100
+#            filters:
+#                thumbnail: { size: [150,150], mode: outbound }
+#        tiny:
+#            quality: 100
+#            filters:
+#                thumbnail: { size: [50,50], mode: outbound }
+#        lessonPreview:
+#            quality: 100
+#            filters:
+#                thumbnail: { size: [267,178], mode: outbound }
+#        chapter:
+#            quality: 100
+#            filters:
+#                thumbnail: { size: [120,90], mode: outbound }
+#        uploadPreview:
+#           quality: 100
+#           filters:
+#                thumbnail: { size: [120,92], mode: outbound }
+#        lessonTiny:
+#            quality: 100
+#            filters:
+#                thumbnail: { size: [100,100], mode: outbound }
 knp_time: ~
 knp_paginator:
     page_range: 5                      # default page range used in pagination control

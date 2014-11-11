@@ -81,6 +81,10 @@ services:
         arguments: [ App\BackendBundle\Entity\Checkin ]
 
     #pagination
+    user.paginator:
+        class: App\BackendBundle\Pagination\KnpPagination
+        arguments: [ @knp_paginator , @user.entity , @request_stack ]
+
     thread.paginator:
         class: App\BackendBundle\Pagination\KnpPagination
         arguments: [ @knp_paginator , @thread.entity , @request_stack ]

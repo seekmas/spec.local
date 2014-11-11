@@ -26,7 +26,7 @@ class AppKernel extends Kernel
 
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 
-            new Liip\ImagineBundle\LiipImagineBundle(),
+            //new Liip\ImagineBundle\LiipImagineBundle(),
 
             //add app bundle
             new App\BackendBundle\AppBackendBundle(),

@@ -17,7 +17,7 @@
         {% for chapter in lesson.chapter %}
         <tr>
             <td>#{{ chapter.id }}</td>
-            <td><img src="{{ asset(chapter.photo) | imagine_filter('tiny') }}" /> {{ chapter.name }}</td>
+            <td><img src="{{ asset(chapter.photo) }}" /> {{ chapter.name }}</td>
             <td>{{ chapter.isFree }}</td>
             <td>{{ chapter.enabled | is_enabled | raw }}</td>
             <td class="table-action">
