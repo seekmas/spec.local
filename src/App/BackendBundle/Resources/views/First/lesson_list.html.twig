@@ -18,7 +18,7 @@
         {% for lesson in lessons %}
         <tr>
             <td>#{{ lesson.id }}</td>
-            <td><img class="img-thumbnail" src="{{ lesson.photo }}" /></td>
+            <td><img style="width: 100%;" class="img-thumbnail" src="{{ lesson.photo }}" /></td>
             <td>{% if lesson.free %}<span class="label label-default">免费</span>{% else %}<span class="label label-success">收费</span>{% endif %} {{ lesson.name }} <br/>( {{ lesson.category }} )</td>
             <td>{{ lesson.chapter | length }}</td>
             <td>{{ lesson.price | currency | raw }}</td>
