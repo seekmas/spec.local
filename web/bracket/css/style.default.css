@@ -374,11 +374,11 @@ strong {
 }
 
 .logopanel h1 {
-   font-size: 26px;
-   font-family: 'LatoBold', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+   font-size: 30px;
+   font-family: monospace;
    letter-spacing: -1.5px;
    color: #1d2939;
-	line-height: 30px;
+    line-height: 20px;
 	margin: 0;
 }
 
@@ -756,7 +756,6 @@ form .form-group:last-child {
 
 .subtitle {
 	font-size: 13px;
-	text-transform: uppercase;
 	color: #333;
 	font-family: 'LatoBold';
 	margin-bottom: 15px;
