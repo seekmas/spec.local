@@ -15,11 +15,11 @@ class RequirementType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('requirement' , null , ['label'=>'我的需求描述'])
-            ->add('email' , null , ['label'=>'我的邮箱'])
+            ->add('requirement' , null , ['label'=>'type.requirement'])
+            ->add('email' , null , ['label'=>'type.email'])
         ;
 
-        $builder->add('submit','submit',['label'=>'发送']);
+        $builder->add('submit','submit',['label'=>'type.send']);
     }
     
     /**

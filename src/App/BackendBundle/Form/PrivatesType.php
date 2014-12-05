@@ -15,15 +15,15 @@ class PrivatesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('photo' , 'file' , ['required'=>false , 'label'=>'头像信息'])
-            ->add('city' , null , ['label'=>'所在的城市'])
-            ->add('company' , null , ['label'=>'所在的公司'])
-            ->add('phone' , null , ['label'=>'手机号'])
-            ->add('job' , null , ['label'=>'职位'])
-            ->add('interesting' , null , ['label'=>'对什么感兴趣'])
+            ->add('photo' , 'file' , ['required'=>false , 'label'=>'user.avatar'])
+            ->add('city' , null , ['label'=>'user.city'])
+            ->add('company' , null , ['label'=>'user.company'])
+            ->add('phone' , null , ['label'=>'user.mobile'])
+            ->add('job' , null , ['label'=>'user.job'])
+            ->add('interesting' , null , ['label'=>'user.interested'])
         ;
 
-        $builder->add('submit','submit' , ['label'=>'更新']);
+        $builder->add('submit','submit' , ['label'=>'user.updated']);
     }
     
     /**

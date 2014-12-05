@@ -1,14 +1,14 @@
 {% extends "AppFrontendBundle:Theme:layout.html.twig" %}
 
-{% block moduleName %}课程学习{% endblock %}
+{% block moduleName %}<i class="fa fa-book"></i> {{ 'first.learning' | trans | raw }}{% endblock %}
 
 {% block navigation %}
 
-    <li><a href="{{ url('home_lesson' , {'id':lesson.id}) }}">课程 [ {{ lesson.name }} ] </a></li>
+    <li><a href="{{ url('home_lesson' , {'id':lesson.id}) }}">{{ 'first.course' | trans | raw }} [ {{ lesson.name }} ] </a></li>
 
     {% if chapter != NULL %}
 
-        <li><a href="{{ url('home_lesson' , {'id':lesson.id , 'chapterId':chapter.id}) }}">章节 [ {{ chapter.name }} ] </a></li>
+        <li><a href="{{ url('home_lesson' , {'id':lesson.id , 'chapterId':chapter.id}) }}"> [ {{ chapter.name }} ] </a></li>
 
     {% endif %}
 
@@ -22,38 +22,44 @@
 <div class="col-md-12">
 
     <div class="profile-header">
-        <h2 class="profile-name">{{ lesson.name }} {% if lesson.free %}<span class="label label-success">当前免费课程</span>{% endif %}</h2>
+        <h2 class="profile-name">{{ lesson.name }}
+            {% if lesson.free %}
+                <span class="label label-success">{{ 'first.free_course' | trans | raw }}</span>
+            {% endif %}
+        </h2>
 
         <div class="row">
-            <div class="col-md-1">课程价格: {{ lesson.price | currency | raw }}</div>
-            <div class="col-md-1">课时: {{ lesson.chapter | length }}</div>
+            {% if lesson.free == false %}
+                <div class="col-md-1">{{ 'first.price' | trans | raw }}: {{ lesson.price | currency | raw }}</div>
+            {% endif %}
+            <div class="col-md-1">{{ 'first.period' | trans | raw }}: {{ lesson.chapter | length }}</div>
         </div>
 
         <div class="mb20"></div>
 
         {% if lesson.free %}
-
-        <a class="btn btn-success mr5" href="#"><i class="fa fa-user"></i> 本课程限时免费</a>
+            <a class="btn btn-success mr5" href="#"><i class="fa fa-user"></i> {{ 'first.free_course' | trans | raw }}</a>
        {% else %}
-        <a class="btn btn-success mr5" href="{{ url('payment' , {'lessonId':lesson.id}) }}"><i class="fa fa-user"></i> 购买课程</a>
+            <a class="btn btn-success mr5" href="{{ url('payment' , {'lessonId':lesson.id}) }}"><i class="fa fa-user"></i> {{ 'first.purchase' | trans | raw }}</a>
+           <a class="btn btn-primary mr5" href="{{ url('cart' , {'lessonId':lesson.id}) }}"><i class="fa fa-shopping-cart"></i> {{ 'first.cart' | trans | raw }}</a>
         {% endif %}
 
 
-        <a class="btn btn-primary mr5" href="{{ url('cart' , {'lessonId':lesson.id}) }}"><i class="fa fa-shopping-cart"></i> 加入购物车</a>
 
-        <a class="btn btn-primary" href="{{ url('home_lesson' , {'id':lesson.id}) }}"><i class="fa fa-envelope-o"></i> 返回课程列表</a>
+
+        <a class="btn btn-primary" href="{{ url('home_lesson' , {'id':lesson.id}) }}"><i class="fa fa-reply"></i> {{ 'first.return' | trans | raw }}</a>
     </div>
 </div>
 
 <div class="col-sm-3">
     <div class="panel"><div class="panel-body">
-    <h3>课程介绍</h3>
+    <h3>{{ 'first.introduction' | trans | raw }}</h3>
 
     <img src="{{ asset(lesson.photo)}}" width="100%" />
 
     <div class="mb30"></div>
 
-    <h3>课程包含</h3>
+    <h3>{{ 'first.include' | trans | raw }}</h3>
 
     <ul class="profile-social-list">
     {% if chapter == NULL %}
@@ -80,15 +86,14 @@
     <li class="active">
         <a href="#activities" data-toggle="tab">
         {% if chapter == NULL %}
-            <strong>课程小节</strong>
+            <strong>{{ 'first.play_list' | trans | raw }}</strong>
         {% else %}
             <strong>{{ chapter.name }}</strong>
         {% endif %}
         </a>
     </li>
-    <li><a href="#followers" data-toggle="tab"><strong>课程介绍</strong></a></li>
-    <li><a href="#following" data-toggle="tab"><strong>讨论</strong></a></li>
-    <li><a href="#events" data-toggle="tab"><strong>线下活动</strong></a></li>
+    <li><a href="#followers" data-toggle="tab"><strong>{{ 'first.information' | trans | raw }}</strong></a></li>
+    <li><a href="#following" data-toggle="tab"><strong>{{ 'first.forum' | trans | raw }}</strong></a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -114,7 +119,7 @@
 
         {% if purchase == NULL and lesson.free == NULL %}
 
-            <a class="btn btn-success" href="{{ url('payment' , {'lessonId':lesson.id}) }}">你还没有购买这个课程 点击购买</a>
+            <a class="btn btn-success" href="{{ url('payment' , {'lessonId':lesson.id}) }}">{{ 'first.not_paid_yet' | trans | raw }}</a>
 
         {% else %}
         <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="100%" height="600"
@@ -132,7 +137,6 @@
 
                 <div class="blog-summary">
                     <p>{{ chapter.content | raw }}</p>
-                    <button class="btn btn-sm btn-white">Read More</button>
                 </div>
             </div>
         </div>
@@ -160,14 +164,6 @@
 
 </div>
 
-
-<div class="tab-pane" id="events">
-    <div class="events">
-
-
-
-    </div><!-- events -->
-</div>
 </div><!-- tab-content -->
 
 </div><!-- col-sm-9 -->

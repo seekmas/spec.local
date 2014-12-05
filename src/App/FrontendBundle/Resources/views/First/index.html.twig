@@ -1,6 +1,6 @@
 {% extends "AppFrontendBundle:Theme:layout.html.twig" %}
 
-{% block moduleName %}课程目录{% endblock %}
+{% block moduleName %}<i class="fa fa-university"></i> {{ 'first.directory' | trans | raw }}{% endblock %}
 
 {% block body %}
     <div class="contentpanel">
@@ -33,9 +33,9 @@
 
             <div class="mb30"></div>
 
-            <h5 class="subtitle">分类 <a href="{{ url('take_requirements') }}" class="pull-right">+ 我有新需求</a></h5>
+            <h5 class="subtitle">{{ 'first.catalog' | trans | raw }} <a href="{{ url('take_requirements') }}" class="pull-right">+ {{ 'first.requirements' | trans | raw }}</a></h5>
             <ul class="folder-list">
-                <li><a href="{{ url('home_page') }}"><i class="fa fa-folder-o"></i> 全部课程</a></li>
+                <li><a href="{{ url('home_page') }}"><i class="fa fa-folder-o"></i> {{ 'first.all_courses' | trans | raw }}</a></li>
                 {% for category in categories %}
                 <li><a href="{{ url('home_page' , {'categoryId':category.id}) }}"><i class="fa fa-folder-o"></i> {{ category.name }}</a></li>
                 {% endfor %}
@@ -43,7 +43,7 @@
 
             <div class="mb30"></div>
 
-            <h5 class="subtitle">标签</h5>
+            <h5 class="subtitle">{{ 'first.tag' | trans | raw }}</h5>
         </div>
     </div><!-- col-sm-3 -->
     </div>

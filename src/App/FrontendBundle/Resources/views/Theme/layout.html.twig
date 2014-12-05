@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-    <title>{% block title %}精益云学院{% endblock %}</title>
+    <title>{% block title %}{{ 'head.title' | trans | raw }}{% endblock %}</title>
     {% block stylesheets %}
     <link href="{{ asset('bracket/css/style.default.css') }}" rel="stylesheet">
     <link href="{{ asset('video-js/video-js.css') }}" rel="stylesheet">
@@ -45,8 +45,6 @@
 
         <a class="menutoggle"><i class="fa fa-bars"></i></a>
 
-
-
         <div class="header-right">
             <ul class="headermenu">
                 <li>
@@ -57,11 +55,11 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                            <li><a href="{{ url('user_home') }}"><i class="glyphicon glyphicon-user"></i> 个人信息 / 隐私</a></li>
+                            <li><a href="{{ url('user_home') }}"><i class="glyphicon glyphicon-user"></i> {{ 'layout.user_configuration' | trans | raw }}</a></li>
                             {% if is_granted('ROLE_ADMIN') %}
-                            <li><a href="{{ url('dashboard') }}"><i class="glyphicon glyphicon-question-sign"></i> 管理</a></li>
+                            <li><a href="{{ url('dashboard') }}"><i class="glyphicon glyphicon-question-sign"></i> {{ 'layout.administration' | trans | raw  }}</a></li>
                             {% endif %}
-                            <li><a href="{{ url('fos_user_security_logout') }}"><i class="glyphicon glyphicon-log-out"></i> 注销</a></li>
+                            <li><a href="{{ url('fos_user_security_logout') }}"><i class="glyphicon glyphicon-log-out"></i> {{ 'layout.logout' | trans | raw }}</a></li>
                         </ul>
                     </div>
                 </li>
@@ -76,11 +74,11 @@
     </div><!-- headerbar -->
 
     <div class="pageheader">
-        <h2><i class="fa fa-user"></i> {% block moduleName %}{% endblock %}</h2>
+        <h2>{% block moduleName %}{% endblock %}</h2>
         <div class="breadcrumb-wrapper">
-            <span class="label">你当前的位置:</span>
+            <span class="label">{{ 'layout.location' | trans | raw }}:</span>
             <ol class="breadcrumb">
-                <li><a href="{{ url('home_page') }}">精益云学院首页</a></li>
+                <li><a href="{{ url('home_page') }}">{{ 'layout.home' | trans | raw }}</a></li>
                 {% block navigation %}{% endblock %}
             </ol>
         </div>
@@ -141,10 +139,10 @@
         {% for message in messages %}
         bootbox.dialog({
             message: "{{ message }}",
-            title: "提醒",
+            title: "{{ 'layout.message' | trans | raw }}",
             buttons: {
                 success: {
-                    label: "确定",
+                    label: "{{ 'layout.ok' | trans | raw }}",
                     className: "btn-success",
                     callback: function() {
 

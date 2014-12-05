@@ -1,9 +1,9 @@
 {% extends "AppFrontendBundle:Theme:layout.html.twig" %}
 
-{% block moduleName %}我有新需求{% endblock %}
+{% block moduleName %}<i class="fa fa-plus"></i> {{ 'first.requirements' | trans | raw }}{% endblock %}
 
 {% block navigation %}
-<li>我有新需求</li>
+<li>{{ 'first.requirements' | trans | raw }}</li>
 {% endblock %}
 
 {% block body %}
@@ -17,8 +17,8 @@
                     <a href="#" class="panel-close">×</a>
                     <a href="#" class="minimize">−</a>
                 </div><!-- panel-btns -->
-                <h3 class="panel-title">提需求</h3>
-                <p>发送你的课程需求到课程开发团队</p>
+                <h3 class="panel-title">{{ 'first.make_better' | trans | raw }}</h3>
+                <p>{{ 'first.send_requirements' | trans | raw }}</p>
             </div>
             <div class="panel-body">
                 {{ form(form) }}

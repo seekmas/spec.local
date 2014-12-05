@@ -1,10 +1,10 @@
 {% extends "AppFrontendBundle:Theme:layout.html.twig" %}
 
-{% block moduleName %}社区{% endblock %}
+{% block moduleName %}{{ 'forum.community' | trans | raw }}{% endblock %}
 
 {% block navigation %}
 
-    <li><a href="{{ url('forum') }}">社区</a></li>
+    <li><a href="{{ url('forum') }}">{{ 'forum.community' | trans | raw }}</a></li>
 
 {% endblock %}
 
@@ -17,13 +17,13 @@
         <div class="col-sm-3 col-lg-2">
 
             {% block leftLink %}
-            <button class="btn btn-danger btn-block btn-compose-email" id="posts_a_post">发帖子</button>
+            <button class="btn btn-danger btn-block btn-compose-email" id="posts_a_post">{{ 'forum.new_post' | trans | raw }}</button>
             {% endblock %}
 
             <ul class="nav nav-pills nav-stacked nav-email">
                 <li class="active">
                     <a  href="{{ url('forum') }}">
-                        <i class="glyphicon glyphicon-inbox"></i> 所有帖子
+                        <i class="glyphicon glyphicon-inbox"></i> {{ 'forum.all_posts' | trans | raw }}
                     </a>
                 </li>
             </ul>
@@ -41,7 +41,7 @@
 
     </div><!-- pull-right -->
 
-    <h5 class="subtitle mb5">最新的帖子</h5>
+    <h5 class="subtitle mb5">{{ 'forum.latest_posts' | trans | raw }}</h5>
 
         {% include "AppFrontendBundle:Forum:index_content.html.twig" %}
 
@@ -50,7 +50,7 @@
 
     <div id="create_new_posts" class="panel panel-default">
     <div class="panel-body">
-        <h5 class="subtitle mb5">发布新帖子</h5>
+        <h5 class="subtitle mb5">{{ 'forum.send' | trans | raw }}</h5>
         {{ form(form) }}
     </div>
     </div>

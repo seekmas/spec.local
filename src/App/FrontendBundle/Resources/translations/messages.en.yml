@@ -1,0 +1,86 @@
+head:
+    title: OnlineLean
+layout:
+    title: OnlineLean
+    navigation: Navigation
+    user_configuration: Configuration
+    administration: Administration
+    logout: Logout
+    location: You are located in
+    home: Home
+    message: Message
+    ok: OK
+    lesson: Courses
+    forum: Community
+first:
+    all_courses: All courses
+    directory: Course Directory
+    requirements: Requirements
+    catalog: Catalog
+    tag: Tags
+    learning: Learning
+    free_course: This is free for members
+    course: Course
+    price: Price
+    period: Period
+    purchase: Purchase
+    cart: Add to cart
+    return: Return
+    introduction: Introduction
+    include: Include:
+    play_list: Play list
+    information: Information
+    forum: Forum
+    not_paid_yet: You should pay first
+    send_requirements: Have new requirements or ideas ?
+    make_better: Make onlinelean better
+forum:
+    new_post: New Post
+    all_posts: Show all posts
+    latest_posts: Latest Posts
+    send: Publish a new post
+    community: Community
+    subject: Subject
+    content: Content
+    post: Post
+    reply: reply
+    upload: upload image
+    reply_it: Reply It
+    is_locked: This post is locked
+    post_not_exist: This post is not existed
+    post_is_deleted: This post has been deleted
+type:
+    requirement: What do you think
+    email: Your email
+    send: Send
+message:
+    thanks_for_reply: Thanks for your help
+    course_not_found: Course is not found
+    add_to_cart_success: Add to cart success
+    add_to_cart_fail: Add to cart fail
+    reply_success: Reply success
+    post_success: Post success
+user:
+    dashboard: User dashboard
+    profile: User profile
+    check_in: Check in
+    cart: Cart
+    trade_status: Status
+    trade_no: Trade Number
+    start_at: Start at
+    end_at: Closed at
+    pay_for_it: Pay for it
+    enabled: enabled
+    disabled: disabled
+    done: done
+    not_done: unfinished
+    avatar: User avatar
+    city: City
+    company: Company
+    mobile: Mobile Phone
+    job: Job
+    interested: You are interested in
+    updated: Update
+    update_success: Update success
+    check_in_success: Check in success
+    already_checked_in: You already checked in

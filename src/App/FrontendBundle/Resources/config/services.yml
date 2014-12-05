@@ -2,6 +2,19 @@ parameters:
 #    app_frontend.example.class: App\FrontendBundle\Example
 
 services:
+    app_front.menu_builder:
+        class: App\FrontendBundle\Menu\MenuBuilder
+        arguments: [@knp_menu.factory , @service_container]
+
+    app_front.menu.main:
+        class: Knp\Menu\MenuItem
+        factory_service: app_front.menu_builder
+        factory_method: createMainMenu
+        arguments: ["@request"]
+        scope: request
+        tags:
+            - { name: knp_menu.menu, alias: main }
+
     event_subscriber.login_redirect:
         class: App\FrontendBundle\EventListener\RedirectAfterLogin
         tags:

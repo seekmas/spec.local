@@ -6,7 +6,9 @@
     {# sorting of properties based on query components #}
     <th>{{ knp_pagination_sortable(threads, 'Id', 'p.id') }}</th>
     <th></th>
-    <th{% if threads.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(threads, '帖子标题', 'p.subject') }}</th>
+    <th{% if threads.isSorted('a.Title') %} class="sorted"{% endif %}>
+        {{ knp_pagination_sortable(threads, 'Subject', 'p.subject') }}
+    </th>
 </tr>
 
 {% for thread in threads if thread.removedAt == null %}

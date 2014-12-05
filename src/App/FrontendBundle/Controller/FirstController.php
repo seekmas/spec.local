@@ -72,6 +72,9 @@ class FirstController extends CoreController
      */
     public function requirementAction(Request $request)
     {
+
+        $translator = $this->get('translator');
+
         $user = $this->getUser();
         $requirement = new Requirement();
         $requirement->setUser($user);
@@ -82,7 +85,7 @@ class FirstController extends CoreController
         if($form->isValid())
         {
             $this->processForm($form,$requirement);
-            $this->flash('success' , '谢谢你的反馈 你将有机会参与到新课程的免费学习');
+            $this->flash('success' , $translator->trans('message.thanks_for_reply'));
             return $this->to('take_requirements');
         }
 

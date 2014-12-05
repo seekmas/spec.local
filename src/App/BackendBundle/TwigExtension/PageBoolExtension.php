@@ -4,10 +4,15 @@ namespace App\BackendBundle\TwigExtension;
 
 use JMS\DiExtraBundle\Annotation as DI;
 
-
-
 class PageBoolExtension extends \Twig_Extension
 {
+
+    private $container;
+
+    public function __construct($container)
+    {
+        $this->container = $container;
+    }
 
     public function getFilters()
     {
@@ -19,12 +24,14 @@ class PageBoolExtension extends \Twig_Extension
 
     public function is_enabled($value)
     {
-        return ( $value == true ? '<span class="label label-success">启用</span>' : '<span class="label label-danger">禁用</span>');
+        $translator = $this->container->get('translator');
+        return ( $value == true ? '<span class="label label-success">'.$translator->trans('user.enabled').'</span>' : '<span class="label label-danger">'.$translator->trans('user.disabled').'</span>');
     }
 
     public function is_done($value)
     {
-        return ( $value == true ? '<span class="label label-success">完成</span>' : '<span class="label label-danger">未完成</span>');
+        $translator = $this->container->get('translator');
+        return ( $value == true ? '<span class="label label-success">'.$translator->trans('user.done').'</span>' : '<span class="label label-danger">'.$translator->trans('user.not_done').'</span>');
     }
 
     public function getName()

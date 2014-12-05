@@ -1,6 +1,6 @@
 {% extends "AppFrontendBundle:Theme:layout.html.twig" %}
 
-{% block moduleName %}个人信息 / 隐私{% endblock %}
+{% block moduleName %}{{ 'layout.user_configuration' | trans | raw }}{% endblock %}
 
 {% block body %}
 
@@ -14,12 +14,12 @@
                         <a href="#" class="panel-close">×</a>
                         <a href="#" class="minimize">−</a>
                     </div><!-- panel-btns -->
-                    <h3 class="panel-title">我的活动板</h3>
+                    <h3 class="panel-title">{{ 'user.dashboard' | trans | raw }}</h3>
                 </div>
                 <div class="panel-body">
                     <ul class="nav nav-tabs nav-justified">
-                        <li class="active"><a href="#post-privates" data-toggle="tab"><i class="fa fa-file-image-o"></i> <strong>我的资料</strong></a></li>
-                        <li class=""><a href="#post-checkin" data-toggle="tab"><i class="fa fa-map-marker"></i> <strong>签到</strong></a></li>
+                        <li class="active"><a href="#post-privates" data-toggle="tab"><i class="fa fa-file-image-o"></i> <strong>{{ 'user.profile' | trans | raw }}</strong></a></li>
+                        <li class=""><a href="#post-checkin" data-toggle="tab"><i class="fa fa-map-marker"></i> <strong>{{ 'user.check_in' | trans | raw }}</strong></a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="post-privates" class="tab-pane active">
@@ -41,7 +41,7 @@
                         </div>
 
                         <div id="post-checkin" class="tab-pane">
-                            <a class="btn btn-block btn-success" href="{{ url('check_in') }}">签到</a>
+                            <a class="btn btn-block btn-success" href="{{ url('check_in') }}">{{ 'user.check_in' | trans | raw }}</a>
                         </div>
 
                     </div><!-- tab-content -->
@@ -58,7 +58,7 @@
                     <div class="panel-btns">
 
                     </div><!-- panel-btns -->
-                    <h3 class="panel-title">购物车</h3>
+                    <h3 class="panel-title">{{ 'user.cart' | trans | raw }}</h3>
                 </div>
                 <div class="panel-body">
                     <ul>
@@ -67,13 +67,19 @@
                             <small class="pull-right">{{ time_diff( order.createdAt ) }}</small>
                             <h4 class="sender"><a href="{{ url('home_lesson' , {'id':order.lesson.id}) }}">{{ order.lesson.name }}</a></h4>
                             <br/>
-                            <p>购买状态 : {{ order.isLocked | is_done | raw }} {% if order.isLocked == 0 %}<a href="{{ url('payment' , {'lessonId':order.lesson.id}) }}">立即购买</a>{% endif %}</p>
+                            <p>
+                                {{ 'user.trade_status' | trans | raw }} :
+                                {{ order.isLocked | is_done | raw }}
+                                {% if order.isLocked == 0 %}
+                                <a href="{{ url('payment' , {'lessonId':order.lesson.id}) }}">{{ 'user.pay_for_it' | trans | raw }}</a>
+                                {% endif %}
+                            </p>
 
-                            订单号: {{ order.tradeId }}
+                            {{ 'user.trade_no' | trans | raw }} : {{ order.tradeId }}
 
                             {% if order.isLocked %}
-                                <br/>开始: {{ order.startAt | date('Y-m-d') }}
-                                <br/>到期: {{ order.endAt | date('Y-m-d') }}
+                                <br/>{{ 'user.start_at' | trans | raw }} : {{ order.startAt | date('Y-m-d') }}
+                                <br/>{{ 'user.end_at' | trans | raw }} : {{ order.endAt | date('Y-m-d') }}
                             {% endif %}
                         </li>
                         {% endfor %}

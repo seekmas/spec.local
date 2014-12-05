@@ -18,12 +18,13 @@ class PayController extends CoreController
      */
     public function indexAction(Request $request , $lessonId)
     {
+        $translator = $this->get('translator');
         $lesson = $this->get('lesson.entity')->find($lessonId);
         $payment = $this->get('alipay.payment');
 
         if($lesson == NULL)
         {
-            $this->flash('danger' , '找不到课程');
+            $this->flash('danger' , $translator->trans('message.course_not_found'));
         }
 
         $user = $this->getUser();
@@ -48,27 +49,27 @@ class PayController extends CoreController
      */
     public function cartAction(Request $request , $lessonId)
     {
+        $translator = $this->get('translator');
         $payment = $this->get('alipay.payment');
-
         $lesson = $this->get('lesson.entity')->find($lessonId);
 
         if($lesson == NULL)
         {
-            $this->flash('danger' , '找不到课程');
+            $this->flash('danger' , $translator->trans('message.course_not_found'));
         }
         $user = $this->getUser();
         $exist = $payment->orderIsExist($lesson,$user,PurchaseStatus::Cart);
 
         if( $exist)
         {
-            $this->flash('success' , '已经添加成功');
+            $this->flash('success' , $translator->trans('message.add_to_cart_success'));
         }else
         {
             $purchase = $payment->createOrder($lesson,$user);
             if( $purchase->getId())
-                $this->flash('success' , '已经添加成功');
+                $this->flash('success' , $translator->trans('message.add_to_cart_success'));
             else
-                $this->flash('danger' , '添加失败');
+                $this->flash('danger' , $translator->trans('message.add_to_cart_fail'));
         }
 
         return $this->to('home_lesson' , ['id'=>$lessonId]);

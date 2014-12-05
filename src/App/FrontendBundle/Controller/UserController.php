@@ -21,6 +21,7 @@ class UserController extends CoreController
      */
     public function indexAction(Request $request)
     {
+        $translator = $this->get('translator');
         $user = $this->getUser();
         $privates = $user->getPrivates();
         if( $privates == NULL)
@@ -36,7 +37,7 @@ class UserController extends CoreController
         if( $form->isValid())
         {
             $this->processForm($form,$privates,$tmpPhoto);
-            $this->flash('success' , '资料更新成功');
+            $this->flash('success' , $translator->trans('user.update_success'));
             return $this->to('user_home');
         }
 
@@ -54,6 +55,7 @@ class UserController extends CoreController
      */
     public function checkInAction(Request $request)
     {
+        $translator = $this->get('translator');
 
         $user = $this->getUser();
         $checkin = $this->get('checkin.entity')
@@ -73,10 +75,10 @@ class UserController extends CoreController
             $checkin->setCheckinAt(new \Datetime());
             $em->flush();
 
-            $this->flash('success' , '首次签到成功!');
+            $this->flash('success' , $translator->trans('user.check_in_success'));
         }else if( $checkin->getCheckinAt()->format('Y-m-d') == date('Y-m-d') )
         {
-            $this->flash('success' , '已经签到过了 请勿重复签到!');
+            $this->flash('success' , $translator->trans('user.already_checked_in'));
         }else
         {
 
@@ -87,7 +89,7 @@ class UserController extends CoreController
             $checkin->setCheckinAt(new \Datetime());
             $em->flush();
 
-            $this->flash('success' , '今日签到成功!');
+            $this->flash('success' , $translator->trans('user.check_in_success'));
         }
 
         return $this->to('user_home');    }

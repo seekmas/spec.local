@@ -2,7 +2,7 @@
 <div class="pull-right">
 
     <div class="btn-group mr5">
-        <button id="reply_thread" class="btn btn-white" type="button"><i class="fa fa-reply"></i> 回复</button>
+        <button id="reply_thread" class="btn btn-white" type="button"><i class="fa fa-reply"></i> {{ 'forum.reply' | trans | raw }}</button>
     </div>
 
 </div>
@@ -53,9 +53,9 @@
 
             <div class="media-body act-media-body">
 
-                <span class="label label-default">{{ key+1 }}楼</span>
+                <span class="label label-default">#{{ key+1 }}</span>
 
-                <strong>{{ reply.user.username }}</strong> 的回复 <br>
+                <strong>{{ reply.user.username }}</strong> {{ 'forum.reply' | trans | raw }} <br>
                 <small class="text-muted">{{ thread.user.email }}</small>
 
 
@@ -95,7 +95,7 @@
 
             {% if thread.isLocked %}
 
-                帖子已经被锁定 无法回复
+                {{ 'forum.is_locked' | trans | raw }}
 
             {% else %}
 

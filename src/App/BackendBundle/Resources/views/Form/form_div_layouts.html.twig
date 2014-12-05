@@ -88,7 +88,7 @@
             {{ label|trans({}, translation_domain) }}
 
             {% if required -%}
-                {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %} <strong>( 必填 )</strong>
+                {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %} <strong>( Required )</strong>
             {%- endif %}
 
         </label>

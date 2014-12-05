@@ -20,6 +20,7 @@ class ForumController extends CoreController
      */
     public function indexAction(Request $request)
     {
+        $translator = $this->get('translator');
 
         $new = new Thread();
         $type = new ThreadType();
@@ -30,7 +31,7 @@ class ForumController extends CoreController
             $new->setIsLocked(false);
             $new->setUser($user);
             $this->processForm($form,$new);
-            $this->flash('success' , '发帖成功');
+            $this->flash('success' , $translator->trans('message.post_success'));
             return $this->to('forum');
         }
 
@@ -45,6 +46,7 @@ class ForumController extends CoreController
      */
     public function threadAction(Request $request, $id)
     {
+        $translator = $this->get('translator');
         $thread = $this->get('thread.entity')->find($id);
         if($thread == null)
         {
@@ -63,7 +65,7 @@ class ForumController extends CoreController
             $reply->setCreatedAt(new \Datetime());
 
             $this->processForm($form,$reply);
-            $this->flash('success' , '回复成功');
+            $this->flash('success' , $translator->trans('message.reply_success'));
             return $this->to('thread' , ['id'=>$id]);
         }
 

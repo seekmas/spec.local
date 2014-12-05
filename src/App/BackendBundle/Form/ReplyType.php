@@ -15,10 +15,10 @@ class ReplyType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('content' , null , ['label' => '回复内容'])
-            ->add('photo' , 'file' , ['required'=>false,'label'=>'图片'])
+            ->add('content' , null , ['label' => 'forum.reply'])
+            ->add('photo' , 'file' , ['required'=>false,'label'=>'forum.upload'])
         ;
-        $builder->add('submit' , 'submit' , ['label'=>'回复']);
+        $builder->add('submit' , 'submit' , ['label'=>'forum.reply_it']);
     }
 
     /**
